@@ -1,0 +1,1283 @@
+[
+  {
+    "id": "golden-lancehead",
+    "name": "Golden Lancehead",
+    "epithet": "The Island Assassin",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Snake Island, Brazil",
+    "rarity": "legendary",
+    "image": "images/animals/golden-lancehead.webp",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 6,
+      "size": 4
+    },
+    "facts": [
+      "Its venom is up to 5 times more potent than mainland lanceheads",
+      "Lives only on one tiny island cut off by sea-level rise 11,000 years ago",
+      "Evolved to specialize in catching migratory birds from tree branches"
+    ]
+  },
+  {
+    "id": "golden-crowned-snake",
+    "name": "Golden-Crowned Snake",
+    "epithet": "The Shy Nocturnal",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Eastern Australia",
+    "rarity": "common",
+    "image": "images/animals/gold-crown.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 4,
+      "size": 3
+    },
+    "facts": [
+      "Despite being venomous, bites are rare and only happen when handled",
+      "It is the largest species in the crowned snake genus",
+      "Has a distinct pale yellow-brown crown-like marking on its head"
+    ]
+  },
+  {
+    "id": "sydney-funnel-web",
+    "name": "Sydney Funnel-Web Spider",
+    "epithet": "The Deadly Weaver",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Sydney, Australia",
+    "rarity": "rare",
+    "image": "images/animals/sydney-funnel-web.avif",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 5,
+      "size": 2
+    },
+    "facts": [
+      "Before antivenom in 1981, it caused multiple human deaths - none since!",
+      "Males have MORE potent venom for humans than females",
+      "Builds burrows with silk trip-lines to detect passing prey"
+    ]
+  },
+  {
+    "id": "saltwater-crocodile",
+    "name": "Saltwater Crocodile",
+    "epithet": "The Ancient Predator",
+    "type": "reptile",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Australia & Southeast Asia",
+    "rarity": "rare",
+    "image": "images/animals/saltwater-crocodile.webp",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 7,
+      "size": 10
+    },
+    "facts": [
+      "Has the most powerful bite of any animal - 3,700 PSI!",
+      "Can travel hundreds of kilometers through the ocean using currents",
+      "Australian populations recovered to 100,000-200,000 after hunting bans"
+    ]
+  },
+  {
+    "id": "jaguar",
+    "name": "Jaguar",
+    "epithet": "The Skull Crusher",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Central & South America",
+    "rarity": "legendary",
+    "image": "images/animals/janguar.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 8,
+      "size": 8
+    },
+    "facts": [
+      "Has a bite powerful enough to pierce turtle shells and crocodile skulls",
+      "Black jaguars (melanistic) are fairly common in dense forests",
+      "The largest cat in the Americas and third largest in the world"
+    ]
+  },
+  {
+    "id": "tiger-snake",
+    "name": "Tiger Snake",
+    "epithet": "The Wetland Stalker",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "freshwater",
+    "region": "Southern Australia & Tasmania",
+    "rarity": "uncommon",
+    "image": "images/animals/tiger-snake.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 6,
+      "size": 5
+    },
+    "facts": [
+      "Venom combines 4 deadly effects: neurotoxic, myotoxic, hemolytic, and coagulant",
+      "Responsible for many serious snakebites in southern Australia",
+      "Excellent swimmer and capable climber despite living in wetlands"
+    ]
+  },
+  {
+    "id": "red-bellied-black-snake",
+    "name": "Red-Bellied Black Snake",
+    "epithet": "The Glossy Beauty",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "freshwater",
+    "region": "Eastern Australia",
+    "rarity": "uncommon",
+    "image": "images/animals/red-bellied-black-snake.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 6,
+      "size": 5
+    },
+    "facts": [
+      "Despite being commonly encountered, there are ZERO confirmed human deaths!",
+      "Has a gorgeous glossy black back with a bright red to pink belly",
+      "Often confused with the more dangerous eastern brown snake"
+    ]
+  },
+  {
+    "id": "cheetah",
+    "name": "Cheetah",
+    "epithet": "The Speed King",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Africa & Iran",
+    "rarity": "rare",
+    "image": "images/animals/Cheetah..webp",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 10,
+      "size": 6
+    },
+    "facts": [
+      "The fastest land animal - can reach 100-120 km/h in just 3 seconds!",
+      "Uses its long tail like a rudder for balance during high-speed chases",
+      "Unlike most big cats, cheetahs can purr and make bird-like chirping calls"
+    ]
+  },
+  {
+    "id": "snow-leopard",
+    "name": "Snow Leopard",
+    "epithet": "The Ghost of the Mountains",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Central Asia Mountains",
+    "rarity": "legendary",
+    "image": "images/animals/snow-leopard.webp",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 7,
+      "size": 6
+    },
+    "facts": [
+      "Only 4,000-6,500 remain in the wild, living in remote mountain terrain",
+      "Has an exceptionally long thick tail for balance AND to cover its face when sleeping",
+      "Home ranges can exceed 1,000 square kilometers in low-prey regions"
+    ]
+  },
+  {
+    "id": "inland-taipan",
+    "name": "Inland Taipan",
+    "epithet": "The Fierce Snake",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "desert",
+    "region": "Central Australia",
+    "rarity": "legendary",
+    "image": "images/animals/inland-taipan.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 8,
+      "size": 5
+    },
+    "facts": [
+      "The most venomous snake on Earth - one bite could kill 100+ adults!",
+      "Changes color with the seasons - darker in winter to absorb more heat",
+      "Despite its power, it's extremely shy and human bites are very rare"
+    ]
+  },
+  {
+    "id": "cottonmouth",
+    "name": "Cottonmouth",
+    "epithet": "The Water Moccasin",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "freshwater",
+    "region": "Southeastern USA",
+    "rarity": "common",
+    "image": "images/animals/cottonmouth.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 5,
+      "size": 4
+    },
+    "facts": [
+      "Named for the white interior of its mouth shown in its gaping threat display",
+      "One of the few semi-aquatic venomous snakes in North America",
+      "Many harmless water snakes are killed by mistake because they look similar"
+    ]
+  },
+  {
+    "id": "alligator-snapping-turtle",
+    "name": "Alligator Snapping Turtle",
+    "epithet": "The Living Dinosaur",
+    "type": "reptile",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Southeastern USA",
+    "rarity": "rare",
+    "image": "images/animals/alligator-snapping-turtle.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 2,
+      "size": 8
+    },
+    "facts": [
+      "The largest freshwater turtle in North America - can weigh 100 kg!",
+      "Has a worm-like tongue tip it wiggles to lure fish into its jaws",
+      "Can stay underwater for 40-50 minutes without coming up for air"
+    ]
+  },
+  {
+    "id": "death-adder",
+    "name": "Death Adder",
+    "epithet": "The Patient Hunter",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Australia & New Guinea",
+    "rarity": "uncommon",
+    "image": "images/animals/death-adder.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 9,
+      "size": 3
+    },
+    "facts": [
+      "Has the fastest strike of any snake in Australia",
+      "Uses its grub-like tail tip as a lure to attract prey",
+      "Unlike most snakes, it ambushes prey instead of hunting actively"
+    ]
+  },
+  {
+    "id": "green-anaconda",
+    "name": "Green Anaconda",
+    "epithet": "The River Giant",
+    "type": "reptile",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "South America",
+    "rarity": "rare",
+    "image": "images/animals/green-anaconda.webp",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 5,
+      "size": 10
+    },
+    "facts": [
+      "The heaviest snake in the world - can weigh over 200 kg!",
+      "Kills by constriction, squeezing prey until it can't breathe",
+      "Spends most of its time in water where its massive body is more mobile"
+    ]
+  },
+  {
+    "id": "leafy-sea-dragon",
+    "name": "Leafy Sea Dragon",
+    "epithet": "The Ocean's Illusion",
+    "type": "fish",
+    "category": "camouflage",
+    "habitat": "sea",
+    "region": "Southern Australia",
+    "rarity": "legendary",
+    "image": "images/animals/sea-dragon.jpg",
+    "stats": {
+      "dangerLevel": 1,
+      "speed": 2,
+      "size": 3
+    },
+    "facts": [
+      "Not dangerous but extraordinarily weird - looks exactly like floating seaweed!",
+      "Males carry the eggs attached to their tail until they hatch",
+      "Can only be found in the waters off southern and western Australia"
+    ]
+  },
+  {
+    "id": "black-mamba",
+    "name": "Black Mamba",
+    "epithet": "The Shadow of Death",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "Sub-Saharan Africa",
+    "rarity": "legendary",
+    "image": "images/animals/black-mamba.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 9,
+      "size": 6
+    },
+    "facts": [
+      "The fastest snake in the world - can slither at 20 km/h!",
+      "Named for the ink-black inside of its mouth, not its body color",
+      "Without antivenom, its bite is almost 100% fatal within 7-15 hours"
+    ]
+  },
+  {
+    "id": "king-cobra",
+    "name": "King Cobra",
+    "epithet": "The Serpent King",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Southeast Asia & India",
+    "rarity": "legendary",
+    "image": "images/animals/king-cobra.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 6,
+      "size": 7
+    },
+    "facts": [
+      "The longest venomous snake in the world - can reach 5.5 meters!",
+      "Can raise up to 1/3 of its body off the ground to look you in the eye",
+      "One of the only snakes that builds a nest and guards its eggs"
+    ]
+  },
+  {
+    "id": "gaboon-viper",
+    "name": "Gaboon Viper",
+    "epithet": "The Hidden Giant",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Central & West Africa",
+    "rarity": "rare",
+    "image": "images/animals/gaboon-viper.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 4,
+      "size": 6
+    },
+    "facts": [
+      "Has the longest fangs of any snake - up to 5 cm long!",
+      "Injects more venom in a single bite than any other snake",
+      "Its geometric pattern provides perfect camouflage among fallen leaves"
+    ]
+  },
+  {
+    "id": "eastern-brown-snake",
+    "name": "Eastern Brown Snake",
+    "epithet": "The Quick Striker",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "Eastern Australia",
+    "rarity": "uncommon",
+    "image": "images/animals/eastern-brown.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 8,
+      "size": 5
+    },
+    "facts": [
+      "Responsible for the most snakebite deaths in Australia",
+      "The second most venomous land snake in the world",
+      "Often found near farms and houses hunting mice and rats"
+    ]
+  },
+  {
+    "id": "fer-de-lance",
+    "name": "Fer-de-Lance",
+    "epithet": "The Ultimate Pit Viper",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Central & South America",
+    "rarity": "uncommon",
+    "image": "images/animals/fer-de-lance.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 7,
+      "size": 5
+    },
+    "facts": [
+      "Causes more human deaths than any other snake in the Americas",
+      "Name means 'spearhead' in French, describing its triangular head",
+      "Can give birth to up to 100 baby snakes at once!"
+    ]
+  },
+  {
+    "id": "boomslang",
+    "name": "Boomslang",
+    "epithet": "The Tree Snake",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Sub-Saharan Africa",
+    "rarity": "uncommon",
+    "image": "images/animals/boomslang.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 7,
+      "size": 4
+    },
+    "facts": [
+      "Has enormous eyes that give it excellent depth perception for hunting",
+      "Its venom prevents blood from clotting, causing internal bleeding",
+      "Name means 'tree snake' in Afrikaans"
+    ]
+  },
+  {
+    "id": "blue-poison-dart-frog",
+    "name": "Blue Poison Dart Frog",
+    "epithet": "The Azure Jewel",
+    "type": "amphibian",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Suriname & Brazil",
+    "rarity": "rare",
+    "image": "images/animals/blue-poison-dart-frog.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "Its stunning blue color warns predators: 'I am TOXIC!'",
+      "One frog has enough poison to kill 10 adult humans",
+      "Loses its toxicity in captivity because the poison comes from its diet"
+    ]
+  },
+  {
+    "id": "golden-poison-frog",
+    "name": "Golden Poison Frog",
+    "epithet": "The Deadliest Frog",
+    "type": "amphibian",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Colombia",
+    "rarity": "legendary",
+    "image": "images/animals/golden-poison-frog.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "The most poisonous vertebrate on Earth!",
+      "One frog has enough toxin to kill 10-20 adult humans or 10,000 mice",
+      "Indigenous people use its poison on blowgun darts for hunting"
+    ]
+  },
+  {
+    "id": "strawberry-poison-frog",
+    "name": "Strawberry Poison Frog",
+    "epithet": "The Blue Jeans Frog",
+    "type": "amphibian",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Central America",
+    "rarity": "uncommon",
+    "image": "images/animals/strawberry-poison-frog.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "Nicknamed 'blue jeans frog' for its red body and blue legs",
+      "Comes in over 30 different color variations across its range",
+      "Males wrestle each other and carry tadpoles on their backs"
+    ]
+  },
+  {
+    "id": "dyeing-dart-frog",
+    "name": "Dyeing Dart Frog",
+    "epithet": "The Rainbow Warrior",
+    "type": "amphibian",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Northern South America",
+    "rarity": "rare",
+    "image": "images/animals/dyeing-dart-frog.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 4,
+      "size": 2
+    },
+    "facts": [
+      "Legend says natives rubbed it on parrots to change their feather colors",
+      "One of the largest poison dart frogs at 5 cm long",
+      "Females compete for males - the opposite of most frogs!"
+    ]
+  },
+  {
+    "id": "green-black-poison-frog",
+    "name": "Green & Black Poison Frog",
+    "epithet": "The Mint Poison Frog",
+    "type": "amphibian",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Central America",
+    "rarity": "common",
+    "image": "images/animals/green-black-poison-frog.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "Despite its name, it can be green, blue, or even bronze colored",
+      "Males are devoted dads who carry tadpoles to water pools",
+      "One of the most commonly kept poison frogs in captivity"
+    ]
+  },
+  {
+    "id": "phantasmal-poison-frog",
+    "name": "Phantasmal Poison Frog",
+    "epithet": "The Ghost Frog",
+    "type": "amphibian",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Ecuador",
+    "rarity": "legendary",
+    "image": "images/animals/phantasmal-poison-frog.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "Scientists discovered a powerful painkiller from its skin toxin",
+      "Critically endangered with only a few hundred left in the wild",
+      "Its toxin is 200 times more potent than morphine!"
+    ]
+  },
+  {
+    "id": "splash-back-poison-frog",
+    "name": "Splash-Back Poison Frog",
+    "epithet": "The Painted Beauty",
+    "type": "amphibian",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Ecuador & Colombia",
+    "rarity": "uncommon",
+    "image": "images/animals/splash-back-poison-frog.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "Named for the bright yellow 'splash' pattern on its back",
+      "Lives only in small streams in cloud forest mountains",
+      "Both parents work together to raise their tadpoles"
+    ]
+  },
+  {
+    "id": "lion",
+    "name": "Lion",
+    "epithet": "The King of Beasts",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Africa & India",
+    "rarity": "rare",
+    "image": "images/animals/lion.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 8,
+      "size": 9
+    },
+    "facts": [
+      "The only cats that live in social groups called prides",
+      "A lion's roar can be heard from 8 kilometers away!",
+      "Female lions do 90% of the hunting for the pride"
+    ]
+  },
+  {
+    "id": "tiger",
+    "name": "Tiger",
+    "epithet": "The Striped Phantom",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Asia",
+    "rarity": "legendary",
+    "image": "images/animals/tiger.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 8,
+      "size": 9
+    },
+    "facts": [
+      "The largest wild cat in the world - can weigh over 300 kg!",
+      "Every tiger has unique stripes like human fingerprints",
+      "Can eat up to 40 kg of meat in one sitting"
+    ]
+  },
+  {
+    "id": "leopard",
+    "name": "Leopard",
+    "epithet": "The Silent Stalker",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Africa & Asia",
+    "rarity": "uncommon",
+    "image": "images/animals/leopard.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 8,
+      "size": 7
+    },
+    "facts": [
+      "Can carry prey twice its own weight up into trees",
+      "The most adaptable big cat - lives in forests, mountains, and deserts",
+      "Black leopards (panthers) are the same species with extra melanin"
+    ]
+  },
+  {
+    "id": "clouded-leopard",
+    "name": "Clouded Leopard",
+    "epithet": "The Tree Tiger",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Southeast Asia",
+    "rarity": "rare",
+    "image": "images/animals/clouded-leopard.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 7,
+      "size": 5
+    },
+    "facts": [
+      "Has the longest canine teeth relative to body size of any cat",
+      "Can climb down trees headfirst like a squirrel",
+      "So secretive that scientists know very little about wild behavior"
+    ]
+  },
+  {
+    "id": "amur-leopard",
+    "name": "Amur Leopard",
+    "epithet": "The Rarest Cat",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Russia & China",
+    "rarity": "legendary",
+    "image": "images/animals/amur-leopard.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 8,
+      "size": 7
+    },
+    "facts": [
+      "The rarest big cat in the world - only about 100 left in the wild!",
+      "Has a thicker coat than other leopards to survive freezing winters",
+      "Can leap over 6 meters horizontally and 3 meters vertically"
+    ]
+  },
+  {
+    "id": "gray-wolf",
+    "name": "Gray Wolf",
+    "epithet": "The Pack Leader",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Northern Hemisphere",
+    "rarity": "uncommon",
+    "image": "images/animals/gray-wolf.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 8,
+      "size": 7
+    },
+    "facts": [
+      "Packs can take down prey 10 times their size through teamwork",
+      "Can travel 50 km in a single day while hunting",
+      "Their howls can be heard from 16 km away in open terrain"
+    ]
+  },
+  {
+    "id": "african-wild-dog",
+    "name": "African Wild Dog",
+    "epithet": "The Painted Wolf",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Sub-Saharan Africa",
+    "rarity": "rare",
+    "image": "images/animals/african-wild-dog.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 9,
+      "size": 6
+    },
+    "facts": [
+      "Has an 80% hunting success rate - lions only succeed 30% of the time!",
+      "Each dog has a unique coat pattern like a fingerprint",
+      "The whole pack helps feed sick or injured members"
+    ]
+  },
+  {
+    "id": "dhole",
+    "name": "Dhole",
+    "epithet": "The Whistling Hunter",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Asia",
+    "rarity": "rare",
+    "image": "images/animals/dhole.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 8,
+      "size": 5
+    },
+    "facts": [
+      "Communicates with whistles instead of howls - sounds like a bird!",
+      "Packs can drive away tigers and leopards from their kills",
+      "Can jump over 2 meters high from standing still"
+    ]
+  },
+  {
+    "id": "arctic-fox",
+    "name": "Arctic Fox",
+    "epithet": "The Snow Ghost",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Arctic Regions",
+    "rarity": "uncommon",
+    "image": "images/animals/arctic-fox.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 6,
+      "size": 3
+    },
+    "facts": [
+      "Changes color with seasons - white in winter, brown in summer",
+      "Can survive temperatures as low as -50 degrees Celsius!",
+      "Follows polar bears to eat their leftover scraps"
+    ]
+  },
+  {
+    "id": "great-white-shark",
+    "name": "Great White Shark",
+    "epithet": "The Ocean's Apex",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Worldwide Coastal Waters",
+    "rarity": "legendary",
+    "image": "images/animals/great-white-shark.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 8,
+      "size": 10
+    },
+    "facts": [
+      "Can detect one drop of blood in 100 liters of water!",
+      "Has 300 triangular teeth arranged in several rows",
+      "Can breach completely out of the water when hunting seals"
+    ]
+  },
+  {
+    "id": "whale-shark",
+    "name": "Whale Shark",
+    "epithet": "The Gentle Giant",
+    "type": "fish",
+    "category": "filter feeder",
+    "habitat": "sea",
+    "region": "Tropical Oceans",
+    "rarity": "legendary",
+    "image": "images/animals/whale-shark.jpg",
+    "stats": {
+      "dangerLevel": 1,
+      "speed": 4,
+      "size": 10
+    },
+    "facts": [
+      "The largest fish in the world - can grow to 12 meters long!",
+      "Despite its size, it only eats tiny plankton and small fish",
+      "Each whale shark has a unique spot pattern like a fingerprint"
+    ]
+  },
+  {
+    "id": "hammerhead-shark",
+    "name": "Hammerhead Shark",
+    "epithet": "The Hammer Hunter",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Worldwide Warm Waters",
+    "rarity": "rare",
+    "image": "images/animals/hammerhead-shark.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 7,
+      "size": 8
+    },
+    "facts": [
+      "Its wide head gives it 360-degree vision - can see above AND below!",
+      "Uses its head to pin stingrays to the ocean floor",
+      "Swims in schools of up to 500 sharks during the day"
+    ]
+  },
+  {
+    "id": "bull-shark",
+    "name": "Bull Shark",
+    "epithet": "The River Invader",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Worldwide",
+    "rarity": "uncommon",
+    "image": "images/animals/bull-shark.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 7,
+      "size": 7
+    },
+    "facts": [
+      "Can swim in both salt AND fresh water - found in rivers!",
+      "Responsible for most shark attacks near shore",
+      "Has been found 4,000 km up the Amazon River"
+    ]
+  },
+  {
+    "id": "tiger-shark",
+    "name": "Tiger Shark",
+    "epithet": "The Garbage Can",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Tropical & Temperate Waters",
+    "rarity": "rare",
+    "image": "images/animals/tiger-shark.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 7,
+      "size": 9
+    },
+    "facts": [
+      "Will eat almost anything - license plates have been found in their stomachs!",
+      "Named for the dark stripes on its body that fade with age",
+      "Second only to great whites in number of human attacks"
+    ]
+  },
+  {
+    "id": "orca",
+    "name": "Orca",
+    "epithet": "The Killer Whale",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "All Oceans",
+    "rarity": "rare",
+    "image": "images/animals/orca.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 9,
+      "size": 10
+    },
+    "facts": [
+      "Actually a dolphin, not a whale - the largest dolphin species!",
+      "Different pods have different 'languages' and hunting techniques",
+      "Can hunt great white sharks by flipping them upside down"
+    ]
+  },
+  {
+    "id": "humpback-whale",
+    "name": "Humpback Whale",
+    "epithet": "The Ocean Singer",
+    "type": "mammal",
+    "category": "filter feeder",
+    "habitat": "sea",
+    "region": "All Oceans",
+    "rarity": "uncommon",
+    "image": "images/animals/humpback-whale.jpg",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 5,
+      "size": 10
+    },
+    "facts": [
+      "Males sing complex songs that can last for hours!",
+      "Migrates up to 25,000 km per year - the longest of any mammal",
+      "Creates 'bubble nets' to trap fish before eating them"
+    ]
+  },
+  {
+    "id": "blue-whale",
+    "name": "Blue Whale",
+    "epithet": "The Largest Ever",
+    "type": "mammal",
+    "category": "filter feeder",
+    "habitat": "sea",
+    "region": "All Oceans",
+    "rarity": "legendary",
+    "image": "images/animals/blue-whale.jpg",
+    "stats": {
+      "dangerLevel": 1,
+      "speed": 6,
+      "size": 10
+    },
+    "facts": [
+      "The largest animal that has EVER existed - bigger than any dinosaur!",
+      "Its heart is the size of a small car and weighs 400 kg",
+      "A baby blue whale gains 90 kg PER DAY drinking its mother's milk"
+    ]
+  },
+  {
+    "id": "sperm-whale",
+    "name": "Sperm Whale",
+    "epithet": "The Deep Diver",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "All Oceans",
+    "rarity": "rare",
+    "image": "images/animals/sperm-whale.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 6,
+      "size": 10
+    },
+    "facts": [
+      "Can dive to 2,000 meters deep and hold its breath for 90 minutes!",
+      "Has the largest brain of any animal - 9 kg!",
+      "Hunts giant squid in the pitch-black deep ocean"
+    ]
+  },
+  {
+    "id": "bottlenose-dolphin",
+    "name": "Bottlenose Dolphin",
+    "epithet": "The Playful Genius",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Worldwide Warm Waters",
+    "rarity": "common",
+    "image": "images/animals/bottlenose-dolphin.jpg",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 8,
+      "size": 6
+    },
+    "facts": [
+      "Can recognize themselves in mirrors - one of few animals to do so!",
+      "Uses echolocation to 'see' with sound underwater",
+      "Dolphins call each other by name using unique whistles"
+    ]
+  },
+  {
+    "id": "stonefish",
+    "name": "Stonefish",
+    "epithet": "The Hidden Danger",
+    "type": "fish",
+    "category": "venomous",
+    "habitat": "sea",
+    "region": "Indo-Pacific",
+    "rarity": "rare",
+    "image": "images/animals/stonefish.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 2,
+      "size": 3
+    },
+    "facts": [
+      "The most venomous fish in the world!",
+      "Looks exactly like a rock - impossible to see until stepped on",
+      "Its sting is so painful that victims have begged to have their legs amputated"
+    ]
+  },
+  {
+    "id": "lionfish",
+    "name": "Lionfish",
+    "epithet": "The Striped Invader",
+    "type": "fish",
+    "category": "venomous",
+    "habitat": "sea",
+    "region": "Indo-Pacific & Atlantic",
+    "rarity": "common",
+    "image": "images/animals/lionfish.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 4,
+      "size": 3
+    },
+    "facts": [
+      "Has venomous spines that cause extreme pain but are rarely fatal",
+      "An invasive species devastating Atlantic reef fish populations",
+      "A single female can release 2 million eggs per year!"
+    ]
+  },
+  {
+    "id": "box-jellyfish",
+    "name": "Box Jellyfish",
+    "epithet": "The Invisible Killer",
+    "type": "cnidarian",
+    "category": "venomous",
+    "habitat": "sea",
+    "region": "Australia & Indo-Pacific",
+    "rarity": "rare",
+    "image": "images/animals/box-jellyfish.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 5,
+      "size": 3
+    },
+    "facts": [
+      "Has enough venom to kill 60 adult humans!",
+      "Has 24 eyes but no brain - it can still see and hunt",
+      "Almost transparent - nearly invisible in the water"
+    ]
+  },
+  {
+    "id": "blue-ringed-octopus",
+    "name": "Blue-Ringed Octopus",
+    "epithet": "The Tiny Terror",
+    "type": "mollusk",
+    "category": "venomous",
+    "habitat": "sea",
+    "region": "Australia & Indo-Pacific",
+    "rarity": "legendary",
+    "image": "images/animals/blue-ringed-octopus.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "Small enough to fit in your palm but can kill 26 adults!",
+      "Blue rings only appear when it's about to attack",
+      "There is no antivenom - survival requires artificial breathing until venom wears off"
+    ]
+  },
+  {
+    "id": "golden-eagle",
+    "name": "Golden Eagle",
+    "epithet": "The Sky Hunter",
+    "type": "bird",
+    "category": "predator",
+    "habitat": "land",
+    "region": "UK & Northern Hemisphere",
+    "rarity": "rare",
+    "image": "images/animals/golden-eagle.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 9,
+      "size": 6
+    },
+    "facts": [
+      "Can dive at speeds over 240 km/h to catch prey!",
+      "Has eyesight 8 times sharper than a human",
+      "About 500 pairs live in the Scottish Highlands"
+    ]
+  },
+  {
+    "id": "red-kite",
+    "name": "Red Kite",
+    "epithet": "The Welsh Dragon",
+    "type": "bird",
+    "category": "predator",
+    "habitat": "land",
+    "region": "UK & Europe",
+    "rarity": "uncommon",
+    "image": "images/animals/red-kite.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 7,
+      "size": 5
+    },
+    "facts": [
+      "Was almost extinct in the UK - saved by one of the world's longest conservation programs",
+      "In medieval times, they flew over London scavenging scraps",
+      "Has a distinctive forked tail that acts like a rudder in flight"
+    ]
+  },
+  {
+    "id": "peregrine-falcon",
+    "name": "Peregrine Falcon",
+    "epithet": "The Fastest Animal",
+    "type": "bird",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Worldwide",
+    "rarity": "rare",
+    "image": "images/animals/peregrine-falcon.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 10,
+      "size": 4
+    },
+    "facts": [
+      "The fastest animal on Earth - can dive at over 380 km/h!",
+      "Was almost wiped out by pesticides but has made an amazing comeback",
+      "Now nests on skyscrapers and bridges in cities like London"
+    ]
+  },
+  {
+    "id": "barn-owl",
+    "name": "Barn Owl",
+    "epithet": "The Silent Hunter",
+    "type": "bird",
+    "category": "predator",
+    "habitat": "land",
+    "region": "UK & Worldwide",
+    "rarity": "common",
+    "image": "images/animals/barn-owl.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 6,
+      "size": 4
+    },
+    "facts": [
+      "Can hunt in complete darkness using only its hearing",
+      "Its face acts like a satellite dish to collect sounds",
+      "Flies completely silently thanks to special feathers"
+    ]
+  },
+  {
+    "id": "puffin",
+    "name": "Atlantic Puffin",
+    "epithet": "The Sea Parrot",
+    "type": "bird",
+    "category": "fish eater",
+    "habitat": "sea",
+    "region": "UK & North Atlantic",
+    "rarity": "uncommon",
+    "image": "images/animals/puffin.jpg",
+    "stats": {
+      "dangerLevel": 1,
+      "speed": 6,
+      "size": 2
+    },
+    "facts": [
+      "Can hold over 10 fish in its beak at once to feed its chick",
+      "Spends most of its life at sea, only coming to land to breed",
+      "Flaps its wings 400 times per minute when flying!"
+    ]
+  },
+  {
+    "id": "kingfisher",
+    "name": "Common Kingfisher",
+    "epithet": "The Flash of Blue",
+    "type": "bird",
+    "category": "fish eater",
+    "habitat": "freshwater",
+    "region": "UK & Europe",
+    "rarity": "uncommon",
+    "image": "images/animals/kingfisher.jpg",
+    "stats": {
+      "dangerLevel": 1,
+      "speed": 7,
+      "size": 2
+    },
+    "facts": [
+      "Dives into water at 40 km/h to catch fish",
+      "Its feathers aren't actually blue - it's a light trick called iridescence",
+      "Eats its own body weight in fish every day"
+    ]
+  },
+  {
+    "id": "mute-swan",
+    "name": "Mute Swan",
+    "epithet": "The Royal Bird",
+    "type": "bird",
+    "category": "herbivore",
+    "habitat": "freshwater",
+    "region": "UK & Europe",
+    "rarity": "common",
+    "image": "images/animals/mute-swan.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 5,
+      "size": 7
+    },
+    "facts": [
+      "Can break a human arm with its powerful wings when defending its nest!",
+      "In the UK, all unmarked mute swans belong to the Queen",
+      "Mates for life and can live over 20 years"
+    ]
+  },
+  {
+    "id": "electric-eel",
+    "name": "Electric Eel",
+    "epithet": "The Living Battery",
+    "type": "fish",
+    "category": "electric",
+    "habitat": "freshwater",
+    "region": "Amazon Basin",
+    "rarity": "rare",
+    "image": "images/animals/electric-eel.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 4,
+      "size": 6
+    },
+    "facts": [
+      "Can generate 860 volts - enough to knock down a horse!",
+      "Not actually an eel - more closely related to catfish",
+      "80% of its body is made up of electricity-producing organs"
+    ]
+  },
+  {
+    "id": "mantis-shrimp",
+    "name": "Mantis Shrimp",
+    "epithet": "The Thumb Splitter",
+    "type": "crustacean",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Tropical Waters",
+    "rarity": "uncommon",
+    "image": "images/animals/mantis-shrimp.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 9,
+      "size": 2
+    },
+    "facts": [
+      "Punches so fast it creates a shockwave that can boil water!",
+      "Has 16 types of color receptors - humans only have 3",
+      "Can break aquarium glass with its powerful strike"
+    ]
+  },
+  {
+    "id": "cone-snail",
+    "name": "Cone Snail",
+    "epithet": "The Harpoon Hunter",
+    "type": "mollusk",
+    "category": "venomous",
+    "habitat": "sea",
+    "region": "Tropical Waters",
+    "rarity": "uncommon",
+    "image": "images/animals/cone-snail.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 1,
+      "size": 2
+    },
+    "facts": [
+      "Fires a venomous harpoon tooth at prey - there's no antivenom!",
+      "Its beautiful shell makes it deadly - people pick them up and get stung",
+      "Scientists use its venom to develop new painkillers"
+    ]
+  }
+]

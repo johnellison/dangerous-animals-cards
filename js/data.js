@@ -1,0 +1,460 @@
+/**
+ * Animal Data Module
+ * Handles loading, querying, and managing animal data
+ */
+const AnimalData = (function() {
+  let animals = [];
+  let loaded = false;
+
+  /**
+   * Load animals from JSON file
+   */
+  async function loadAnimals() {
+    if (loaded) return animals;
+
+    try {
+      const response = await fetch('data/animals.json');
+      if (!response.ok) throw new Error('Failed to load animals data');
+      animals = await response.json();
+      loaded = true;
+      console.log(`Loaded ${animals.length} animals`);
+      return animals;
+    } catch (error) {
+      console.error('Error loading animals:', error);
+      // Return demo data if file doesn't exist yet
+      animals = getDemoAnimals();
+      loaded = true;
+      return animals;
+    }
+  }
+
+  /**
+   * Demo animals for testing before real data is added
+   */
+  function getDemoAnimals() {
+    return [
+      {
+        id: "king-cobra",
+        name: "King Cobra",
+        epithet: "The Serpent King",
+        type: "reptile",
+        category: "venomous",
+        habitat: "forest",
+        region: "Southeast Asia",
+        rarity: "rare",
+        image: "images/animals/king-cobra.jpg",
+        stats: {
+          dangerLevel: 9,
+          speed: 7,
+          size: 8
+        },
+        facts: [
+          "Can deliver enough venom to kill an elephant in a single bite",
+          "The world's longest venomous snake, reaching up to 18 feet",
+          "The only snake that builds a nest for its eggs"
+        ]
+      },
+      {
+        id: "box-jellyfish",
+        name: "Box Jellyfish",
+        epithet: "The Invisible Killer",
+        type: "cnidarian",
+        category: "venomous",
+        habitat: "sea",
+        region: "Australia & Indo-Pacific",
+        rarity: "uncommon",
+        image: "images/animals/box-jellyfish.jpg",
+        stats: {
+          dangerLevel: 10,
+          speed: 5,
+          size: 4
+        },
+        facts: [
+          "Has enough venom to kill 60 adult humans",
+          "Nearly invisible in the water",
+          "Has 24 eyes but no brain"
+        ]
+      },
+      {
+        id: "inland-taipan",
+        name: "Inland Taipan",
+        epithet: "The Fierce Snake",
+        type: "reptile",
+        category: "venomous",
+        habitat: "desert",
+        region: "Central Australia",
+        rarity: "legendary",
+        image: "images/animals/inland-taipan.jpg",
+        stats: {
+          dangerLevel: 10,
+          speed: 8,
+          size: 5
+        },
+        facts: [
+          "The most venomous snake on Earth",
+          "One bite contains enough venom to kill 100 adult men",
+          "Changes color with the seasons - darker in winter"
+        ]
+      },
+      {
+        id: "blue-ringed-octopus",
+        name: "Blue-Ringed Octopus",
+        epithet: "The Tiny Terror",
+        type: "mollusk",
+        category: "venomous",
+        habitat: "sea",
+        region: "Pacific Ocean",
+        rarity: "rare",
+        image: "images/animals/blue-ringed-octopus.jpg",
+        stats: {
+          dangerLevel: 9,
+          speed: 4,
+          size: 1
+        },
+        facts: [
+          "Only the size of a golf ball but deadly venomous",
+          "Blue rings flash as a warning before it attacks",
+          "Venom can paralyze and kill a human in minutes"
+        ]
+      },
+      {
+        id: "poison-dart-frog",
+        name: "Poison Dart Frog",
+        epithet: "The Living Jewel",
+        type: "amphibian",
+        category: "poisonous",
+        habitat: "forest",
+        region: "Central & South America",
+        rarity: "uncommon",
+        image: "images/animals/poison-dart-frog.jpg",
+        stats: {
+          dangerLevel: 8,
+          speed: 3,
+          size: 1
+        },
+        facts: [
+          "One golden poison frog has enough toxin to kill 10 grown men",
+          "Indigenous people used their poison on blow darts",
+          "Bright colors warn predators: Don't eat me!"
+        ]
+      },
+      {
+        id: "great-white-shark",
+        name: "Great White Shark",
+        epithet: "The Ocean's Apex",
+        type: "fish",
+        category: "predator",
+        habitat: "sea",
+        region: "Worldwide",
+        rarity: "rare",
+        image: "images/animals/great-white-shark.jpg",
+        stats: {
+          dangerLevel: 8,
+          speed: 9,
+          size: 10
+        },
+        facts: [
+          "Can smell a single drop of blood from 3 miles away",
+          "Has 300 serrated teeth arranged in rows",
+          "Can leap completely out of the water when hunting"
+        ]
+      },
+      {
+        id: "komodo-dragon",
+        name: "Komodo Dragon",
+        epithet: "The Living Dinosaur",
+        type: "reptile",
+        category: "venomous",
+        habitat: "land",
+        region: "Indonesia",
+        rarity: "legendary",
+        image: "images/animals/komodo-dragon.jpg",
+        stats: {
+          dangerLevel: 8,
+          speed: 6,
+          size: 9
+        },
+        facts: [
+          "The largest living lizard, up to 10 feet long",
+          "Has venomous glands that prevent blood clotting",
+          "Can eat 80% of its body weight in one meal"
+        ]
+      },
+      {
+        id: "saltwater-crocodile",
+        name: "Saltwater Crocodile",
+        epithet: "The Ancient Predator",
+        type: "reptile",
+        category: "predator",
+        habitat: "freshwater",
+        region: "Australia & Southeast Asia",
+        rarity: "rare",
+        image: "images/animals/saltwater-crocodile.jpg",
+        stats: {
+          dangerLevel: 9,
+          speed: 7,
+          size: 10
+        },
+        facts: [
+          "Has the strongest bite force of any animal - 3,700 PSI",
+          "Can grow over 20 feet long and live 70+ years",
+          "Survived the dinosaur extinction 65 million years ago"
+        ]
+      },
+      {
+        id: "deathstalker-scorpion",
+        name: "Deathstalker Scorpion",
+        epithet: "The Desert Demon",
+        type: "arachnid",
+        category: "venomous",
+        habitat: "desert",
+        region: "North Africa & Middle East",
+        rarity: "uncommon",
+        image: "images/animals/deathstalker-scorpion.jpg",
+        stats: {
+          dangerLevel: 7,
+          speed: 5,
+          size: 2
+        },
+        facts: [
+          "The most dangerous scorpion in the world",
+          "Venom is worth $39 million per gallon for medical research",
+          "Glows under ultraviolet light"
+        ]
+      },
+      {
+        id: "cone-snail",
+        name: "Cone Snail",
+        epithet: "The Beautiful Assassin",
+        type: "mollusk",
+        category: "venomous",
+        habitat: "sea",
+        region: "Tropical Oceans",
+        rarity: "uncommon",
+        image: "images/animals/cone-snail.jpg",
+        stats: {
+          dangerLevel: 8,
+          speed: 1,
+          size: 2
+        },
+        facts: [
+          "Fires a venomous harpoon-like tooth at prey",
+          "No antivenom exists for their sting",
+          "Nicknamed 'cigarette snail' - time for one last smoke"
+        ]
+      }
+    ];
+  }
+
+  /**
+   * Get all animals
+   */
+  function getAll() {
+    return animals;
+  }
+
+  /**
+   * Get animal by ID
+   */
+  function getById(id) {
+    return animals.find(animal => animal.id === id);
+  }
+
+  /**
+   * Get animals by category
+   */
+  function getByCategory(category) {
+    return animals.filter(animal => animal.category === category);
+  }
+
+  /**
+   * Get animals by habitat
+   */
+  function getByHabitat(habitat) {
+    return animals.filter(animal => animal.habitat === habitat);
+  }
+
+  /**
+   * Get animals by rarity
+   */
+  function getByRarity(rarity) {
+    return animals.filter(animal => animal.rarity === rarity);
+  }
+
+  /**
+   * Get animals by type
+   */
+  function getByType(type) {
+    return animals.filter(animal => animal.type === type);
+  }
+
+  /**
+   * Get random animal
+   */
+  function getRandom() {
+    return animals[Math.floor(Math.random() * animals.length)];
+  }
+
+  /**
+   * Get random animals (excluding one)
+   */
+  function getRandomExcluding(excludeId, count = 3) {
+    const filtered = animals.filter(a => a.id !== excludeId);
+    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  }
+
+  /**
+   * Shuffle array
+   */
+  function shuffle(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  return {
+    loadAnimals,
+    getAll,
+    getById,
+    getByCategory,
+    getByHabitat,
+    getByRarity,
+    getByType,
+    getRandom,
+    getRandomExcluding,
+    shuffle
+  };
+})();
+
+/**
+ * Collection/Progress Module
+ * Handles saving and loading player progress
+ */
+const Collection = (function() {
+  const STORAGE_KEY = 'dangerous_animals_collection';
+
+  let discovered = new Set();
+  let stats = {
+    totalFlips: 0,
+    correctGuesses: 0,
+    wrongGuesses: 0,
+    currentStreak: 0,
+    bestStreak: 0
+  };
+
+  /**
+   * Load progress from localStorage
+   */
+  function load() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const data = JSON.parse(saved);
+        discovered = new Set(data.discovered || []);
+        stats = { ...stats, ...data.stats };
+      }
+    } catch (error) {
+      console.error('Error loading collection:', error);
+    }
+  }
+
+  /**
+   * Save progress to localStorage
+   */
+  function save() {
+    try {
+      const data = {
+        discovered: Array.from(discovered),
+        stats: stats
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch (error) {
+      console.error('Error saving collection:', error);
+    }
+  }
+
+  /**
+   * Mark animal as discovered
+   */
+  function discover(animalId) {
+    const wasNew = !discovered.has(animalId);
+    discovered.add(animalId);
+    stats.totalFlips++;
+    save();
+    return wasNew;
+  }
+
+  /**
+   * Check if animal is discovered
+   */
+  function isDiscovered(animalId) {
+    return discovered.has(animalId);
+  }
+
+  /**
+   * Get all discovered animal IDs
+   */
+  function getDiscovered() {
+    return Array.from(discovered);
+  }
+
+  /**
+   * Get discovery count
+   */
+  function getCount() {
+    return discovered.size;
+  }
+
+  /**
+   * Record correct guess
+   */
+  function recordCorrectGuess() {
+    stats.correctGuesses++;
+    stats.currentStreak++;
+    if (stats.currentStreak > stats.bestStreak) {
+      stats.bestStreak = stats.currentStreak;
+    }
+    save();
+  }
+
+  /**
+   * Record wrong guess
+   */
+  function recordWrongGuess() {
+    stats.wrongGuesses++;
+    stats.currentStreak = 0;
+    save();
+  }
+
+  /**
+   * Get stats
+   */
+  function getStats() {
+    return { ...stats };
+  }
+
+  /**
+   * Reset streak (when starting new session)
+   */
+  function resetStreak() {
+    stats.currentStreak = 0;
+    save();
+  }
+
+  return {
+    load,
+    save,
+    discover,
+    isDiscovered,
+    getDiscovered,
+    getCount,
+    recordCorrectGuess,
+    recordWrongGuess,
+    getStats,
+    resetStreak
+  };
+})();

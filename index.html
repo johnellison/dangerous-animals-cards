@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Dangerous Animals - Card Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="logo">Dangerous Animals</h1>
+      <nav class="nav">
+        <button class="nav-btn active" data-mode="discover">Discover</button>
+        <button class="nav-btn" data-mode="guess">Guess</button>
+        <button class="nav-btn" data-mode="collection">Collection</button>
+      </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main">
+      <!-- Discovery Mode -->
+      <section class="mode discover-mode active" id="discover-mode">
+        <div class="card-carousel">
+          <button class="carousel-btn prev" aria-label="Previous card">
+            <span>&lt;</span>
+          </button>
+          <div class="card-stage">
+            <div class="card" id="main-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="card-photo-frame">
+                    <div class="card-rarity-glow"></div>
+                    <div class="card-image-wrapper">
+                      <img class="card-photo" src="" alt="">
+                    </div>
+                    <div class="card-hint">
+                      <span>Who am I?</span>
+                      <span class="tap-hint">Tap to reveal!</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="card-info-frame">
+                    <div class="card-rarity-badge"></div>
+                    <div class="card-type-icon"></div>
+                    <div class="card-name-section">
+                      <h2 class="card-name"></h2>
+                      <p class="card-epithet"></p>
+                    </div>
+                    <div class="card-stats">
+                      <div class="stat">
+                        <span class="stat-label">DANGER</span>
+                        <div class="stat-bar"><div class="stat-fill danger"></div></div>
+                        <span class="stat-value"></span>
+                      </div>
+                      <div class="stat">
+                        <span class="stat-label">SPEED</span>
+                        <div class="stat-bar"><div class="stat-fill speed"></div></div>
+                        <span class="stat-value"></span>
+                      </div>
+                      <div class="stat">
+                        <span class="stat-label">SIZE</span>
+                        <div class="stat-bar"><div class="stat-fill size"></div></div>
+                        <span class="stat-value"></span>
+                      </div>
+                    </div>
+                    <div class="card-facts">
+                      <h3 class="facts-title">Fun Facts</h3>
+                      <ul class="facts-list">
+                        <li class="fact-item"></li>
+                        <li class="fact-item"></li>
+                        <li class="fact-item"></li>
+                      </ul>
+                    </div>
+                    <div class="card-footer">
+                      <span class="card-habitat"></span>
+                      <span class="card-region"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn next" aria-label="Next card">
+            <span>&gt;</span>
+          </button>
+        </div>
+        <div class="card-counter">
+          <span class="current">1</span> / <span class="total">0</span>
+        </div>
+      </section>
+
+      <!-- Guess Mode -->
+      <section class="mode guess-mode" id="guess-mode">
+        <div class="guess-card-stage">
+          <div class="card guess-card" id="guess-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="card-photo-frame silhouette-mode">
+                  <div class="card-image-wrapper">
+                    <img class="card-photo silhouette-image" src="" alt="Mystery Animal">
+                  </div>
+                  <p class="guess-prompt">Who am I?</p>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="card-info-frame">
+                  <div class="card-rarity-badge"></div>
+                  <div class="card-type-icon"></div>
+                  <div class="card-name-section">
+                    <h2 class="card-name"></h2>
+                    <p class="card-epithet"></p>
+                  </div>
+                  <div class="card-stats">
+                    <div class="stat">
+                      <span class="stat-label">DANGER</span>
+                      <div class="stat-bar"><div class="stat-fill danger"></div></div>
+                      <span class="stat-value"></span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-label">SPEED</span>
+                      <div class="stat-bar"><div class="stat-fill speed"></div></div>
+                      <span class="stat-value"></span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-label">SIZE</span>
+                      <div class="stat-bar"><div class="stat-fill size"></div></div>
+                      <span class="stat-value"></span>
+                    </div>
+                  </div>
+                  <div class="card-facts">
+                    <h3 class="facts-title">Fun Facts</h3>
+                    <ul class="facts-list">
+                      <li class="fact-item"></li>
+                      <li class="fact-item"></li>
+                      <li class="fact-item"></li>
+                    </ul>
+                  </div>
+                  <div class="card-footer">
+                    <span class="card-habitat"></span>
+                    <span class="card-region"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="guess-options" id="guess-options">
+          <!-- Options populated by JS -->
+        </div>
+        <div class="guess-result" id="guess-result">
+          <span class="result-icon"></span>
+          <span class="result-text"></span>
+        </div>
+        <div class="guess-score">
+          <span class="score-label">Score:</span>
+          <span class="score-value" id="score-value">0</span>
+          <span class="streak-label">Streak:</span>
+          <span class="streak-value" id="streak-value">0</span>
+        </div>
+        <button class="next-guess-btn" id="next-guess-btn">Next Animal</button>
+      </section>
+
+      <!-- Collection Mode -->
+      <section class="mode collection-mode" id="collection-mode">
+        <div class="collection-header">
+          <h2>My Collection</h2>
+          <div class="collection-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" id="collection-progress"></div>
+            </div>
+            <span class="progress-text" id="collection-text">0 / 0</span>
+          </div>
+        </div>
+        <div class="collection-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="discovered">Discovered</button>
+          <button class="filter-btn" data-filter="undiscovered">Undiscovered</button>
+        </div>
+        <div class="collection-grid" id="collection-grid">
+          <!-- Collection cards populated by JS -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Card Detail Modal -->
+    <div class="modal" id="card-modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-card">
+          <!-- Full card detail view -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="flip-sound" preload="auto">
+      <source src="audio/flip.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="reveal-sound" preload="auto">
+      <source src="audio/reveal.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="correct-sound" preload="auto">
+      <source src="audio/correct.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
