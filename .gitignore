@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Voice clone ID (generated, contains API-specific data)
+.voice-id
+
+# Environment variables
+.env
+
+# Generated audio (large files)
+audio/animals/*.mp3
+audio/voice-sample.wav
+
+# OS files
+.DS_Store

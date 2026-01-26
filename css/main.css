@@ -652,6 +652,116 @@ button {
 }
 
 /* ================================
+   Spaced Repetition Badges
+   ================================ */
+.sr-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  z-index: 2;
+}
+
+.sr-badge.sr-due {
+  background: var(--color-danger);
+  color: white;
+  animation: sr-pulse 1.5s ease-in-out infinite;
+}
+
+.sr-badge.sr-learning {
+  background: var(--color-warning);
+  color: #000;
+}
+
+.sr-badge.sr-mastered {
+  background: var(--color-success);
+  color: #000;
+}
+
+@keyframes sr-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* ================================
+   SR Stats Display
+   ================================ */
+.sr-stats {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+
+.sr-stat {
+  padding: 4px 10px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-elevated);
+}
+
+.sr-stat.due {
+  color: var(--color-danger);
+}
+
+.sr-stat.learning {
+  color: var(--color-warning);
+}
+
+.sr-stat.mastered {
+  color: var(--color-success);
+}
+
+/* ================================
+   Audio Replay Button
+   ================================ */
+.audio-replay-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-elevated);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  border: 2px solid var(--card-border);
+  opacity: 0.8;
+  z-index: 5;
+}
+
+.audio-replay-btn:hover {
+  opacity: 1;
+  background: var(--color-primary);
+  color: #000;
+  transform: scale(1.1);
+}
+
+.audio-replay-btn:active {
+  transform: scale(0.95);
+}
+
+.audio-replay-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ================================
    Utility Classes
    ================================ */
 .sr-only {

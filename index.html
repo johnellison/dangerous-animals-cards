@@ -85,6 +85,11 @@
                       <span class="card-habitat"></span>
                       <span class="card-region"></span>
                     </div>
+                    <button class="audio-replay-btn" aria-label="Replay audio" title="Replay audio">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -185,6 +190,11 @@
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="discovered">Discovered</button>
           <button class="filter-btn" data-filter="undiscovered">Undiscovered</button>
+          <button class="filter-btn" data-filter="due">Due for Review</button>
+          <button class="filter-btn" data-filter="mastered">Mastered</button>
+        </div>
+        <div class="sr-stats" id="sr-stats">
+          <!-- Populated by JS -->
         </div>
         <div class="collection-grid" id="collection-grid">
           <!-- Collection cards populated by JS -->
@@ -216,6 +226,8 @@
   </div>
 
   <script src="js/data.js"></script>
+  <script src="js/spaced-repetition.js"></script>
+  <script src="js/audio.js"></script>
   <script src="js/cards.js"></script>
   <script src="js/game.js"></script>
   <script src="js/app.js"></script>

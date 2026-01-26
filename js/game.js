@@ -14,6 +14,9 @@ const Game = (function() {
   let score = 0;
   let streak = 0;
 
+  // Response time tracking for spaced repetition
+  let guessStartTime = null;
+
   /**
    * Initialize game with animal data
    */
@@ -57,6 +60,18 @@ const Game = (function() {
         renderCollection(btn.dataset.filter);
       });
     });
+
+    // Audio replay button
+    const audioReplayBtn = document.querySelector('.audio-replay-btn');
+    if (audioReplayBtn) {
+      audioReplayBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Don't trigger card flip
+        const animal = animals[currentAnimalIndex];
+        if (animal && typeof AudioManager !== 'undefined') {
+          AudioManager.playAnimalAudio(animal.id, 'intro');
+        }
+      });
+    }
 
     // Keyboard navigation
     document.addEventListener('keydown', handleKeydown);
@@ -154,13 +169,18 @@ const Game = (function() {
     const animal = animals[currentAnimalIndex];
 
     if (!card.classList.contains('flipped')) {
+      // Preload adjacent cards' audio
+      if (typeof AudioManager !== 'undefined') {
+        AudioManager.preloadAdjacentAnimals(animal.id, animals);
+      }
+
       CardRenderer.flipCard(card, () => {
         // Mark as discovered
         const wasNew = Collection.discover(animal.id);
         if (wasNew && animal.rarity === 'legendary') {
           CardRenderer.celebrate();
         }
-      });
+      }, animal.id); // Pass animal ID for audio playback
     } else {
       // Allow flipping back to see the photo again
       CardRenderer.unflipCard(card);
@@ -214,9 +234,12 @@ const Game = (function() {
    */
   function startGuessRound() {
     hasGuessed = false;
+    guessStartTime = Date.now(); // Track response time for SR
 
-    // Pick random animal
-    currentGuessAnimal = AnimalData.getRandom();
+    // Use SR to pick optimal animal for review
+    const allAnimalIds = animals.map(a => a.id);
+    const selectedId = SpacedRepetition.selectCardForReview(allAnimalIds);
+    currentGuessAnimal = AnimalData.getById(selectedId) || AnimalData.getRandom();
 
     // Get 3 wrong options
     const wrongOptions = AnimalData.getRandomExcluding(currentGuessAnimal.id, 3);
@@ -272,8 +295,13 @@ const Game = (function() {
     hasGuessed = true;
 
     const isCorrect = selectedId === currentGuessAnimal.id;
+    const responseTime = Date.now() - guessStartTime;
     const result = document.getElementById('guess-result');
     const resultText = result.querySelector('.result-text');
+
+    // Calculate quality and record review for spaced repetition
+    const quality = SpacedRepetition.calculateQuality(isCorrect, responseTime, streak);
+    SpacedRepetition.recordReview(currentGuessAnimal.id, quality);
 
     // Update option button styles
     document.querySelectorAll('.guess-option').forEach(btn => {
@@ -313,7 +341,7 @@ const Game = (function() {
       CardRenderer.revealSilhouette(front);
       CardRenderer.flipCard(card, () => {
         Collection.discover(currentGuessAnimal.id);
-      });
+      }, currentGuessAnimal.id); // Pass animal ID for audio
     }, 500);
 
     // Show next button
@@ -369,11 +397,19 @@ const Game = (function() {
       filteredAnimals = animals.filter(a => discovered.includes(a.id));
     } else if (filter === 'undiscovered') {
       filteredAnimals = animals.filter(a => !discovered.includes(a.id));
+    } else if (filter === 'due') {
+      // Due for review today
+      const dueIds = SpacedRepetition.getDueCards();
+      filteredAnimals = animals.filter(a => dueIds.includes(a.id));
+    } else if (filter === 'mastered') {
+      // Mastered cards (interval > 30 days)
+      filteredAnimals = animals.filter(a => SpacedRepetition.getStatus(a.id) === 'mastered');
     }
 
     filteredAnimals.forEach(animal => {
       const isDiscovered = discovered.includes(animal.id);
-      const card = CardRenderer.renderCollectionCard(animal, isDiscovered);
+      const srStatus = SpacedRepetition.getStatus(animal.id);
+      const card = CardRenderer.renderCollectionCard(animal, isDiscovered, srStatus);
 
       if (isDiscovered) {
         card.addEventListener('click', () => openCardModal(animal));
@@ -384,6 +420,24 @@ const Game = (function() {
 
     // Update progress
     updateCollectionProgress();
+    updateSRStats();
+  }
+
+  /**
+   * Update SR statistics display
+   */
+  function updateSRStats() {
+    const allAnimalIds = animals.map(a => a.id);
+    const stats = SpacedRepetition.getOverallStats(allAnimalIds);
+
+    const statsEl = document.getElementById('sr-stats');
+    if (statsEl) {
+      statsEl.innerHTML = `
+        <span class="sr-stat due" title="Due for review">${stats.dueCount} due</span>
+        <span class="sr-stat learning" title="Learning">${stats.learningCount} learning</span>
+        <span class="sr-stat mastered" title="Mastered">${stats.masteredCount} mastered</span>
+      `;
+    }
   }
 
   /**

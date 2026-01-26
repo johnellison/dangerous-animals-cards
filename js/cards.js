@@ -111,11 +111,28 @@ const CardRenderer = (function() {
 
   /**
    * Render collection card (mini version)
+   * @param {object} animal - Animal data
+   * @param {boolean} isDiscovered - Whether animal has been discovered
+   * @param {string} srStatus - Spaced repetition status: 'new', 'due', 'learning', 'mastered'
    */
-  function renderCollectionCard(animal, isDiscovered) {
+  function renderCollectionCard(animal, isDiscovered, srStatus = 'new') {
     const card = document.createElement('div');
     card.className = `collection-card ${isDiscovered ? 'discovered' : 'undiscovered'}`;
     card.dataset.id = animal.id;
+
+    // Build SR badge HTML
+    let srBadgeHtml = '';
+    if (isDiscovered && srStatus !== 'new') {
+      const badgeClass = `sr-badge sr-${srStatus}`;
+      const badgeLabel = {
+        due: 'Due',
+        learning: 'Learning',
+        mastered: 'Mastered'
+      }[srStatus] || '';
+      if (badgeLabel) {
+        srBadgeHtml = `<div class="${badgeClass}">${badgeLabel}</div>`;
+      }
+    }
 
     if (isDiscovered) {
       card.innerHTML = `
@@ -123,6 +140,7 @@ const CardRenderer = (function() {
              onerror="this.src='https://placehold.co/200x150/1a1a3a/ffd700?text=${encodeURIComponent(animal.name)}'">
         <div class="card-mini-name">${animal.name}</div>
         <div class="rarity-indicator ${animal.rarity}"></div>
+        ${srBadgeHtml}
       `;
     } else {
       card.innerHTML = `
@@ -164,8 +182,11 @@ const CardRenderer = (function() {
 
   /**
    * Flip card animation
+   * @param {HTMLElement} cardElement - Card element to flip
+   * @param {Function} callback - Optional callback after flip
+   * @param {string} animalId - Optional animal ID to play audio for
    */
-  function flipCard(cardElement, callback) {
+  function flipCard(cardElement, callback, animalId = null) {
     cardElement.classList.add('flipped');
 
     // Play flip sound
@@ -177,6 +198,11 @@ const CardRenderer = (function() {
       const infoFrame = cardElement.querySelector('.card-info-frame');
       if (infoFrame && (infoFrame.classList.contains('rare') || infoFrame.classList.contains('legendary'))) {
         playSound('reveal');
+      }
+
+      // Play animal intro audio if AudioManager is available
+      if (animalId && typeof AudioManager !== 'undefined') {
+        AudioManager.playAnimalAudio(animalId, 'intro');
       }
 
       if (callback) callback();
@@ -232,9 +258,16 @@ const CardRenderer = (function() {
    * Add celebration - randomly picks one of 4 types
    */
   function celebrate() {
+    const celebrationTypes = ['confetti', 'laser', 'fireworks', 'whipped-cream'];
     const celebrations = [confettiCelebration, laserCelebration, fireworksCelebration, whippedCreamCelebration];
-    const randomCelebration = celebrations[Math.floor(Math.random() * celebrations.length)];
-    randomCelebration();
+    const index = Math.floor(Math.random() * celebrations.length);
+
+    // Play celebration sound if AudioManager is available
+    if (typeof AudioManager !== 'undefined') {
+      AudioManager.playCelebration(celebrationTypes[index]);
+    }
+
+    celebrations[index]();
   }
 
   /**
