@@ -447,6 +447,78 @@ button {
   color: var(--color-text-muted);
 }
 
+/* ================================
+   Collection Category Tabs
+   ================================ */
+.collection-tabs {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: var(--space-sm) 0;
+  margin-bottom: var(--space-md);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.collection-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.collection-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-sm) var(--space-md);
+  min-width: 70px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-elevated);
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.collection-tab:hover {
+  background: var(--color-surface);
+  border-color: var(--card-border);
+}
+
+.collection-tab.active {
+  background: var(--color-surface);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.tab-icon {
+  font-size: 1.5rem;
+}
+
+.tab-name {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.collection-tab.active .tab-name {
+  color: var(--color-primary);
+}
+
+.tab-count {
+  font-size: 10px;
+  color: var(--color-text-dim);
+  background: var(--color-surface-elevated);
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+}
+
+.collection-tab.active .tab-count {
+  background: var(--color-primary);
+  color: #000;
+}
+
 .collection-filters {
   display: flex;
   gap: var(--space-sm);

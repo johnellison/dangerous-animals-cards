@@ -6,6 +6,129 @@ const AnimalData = (function() {
   let animals = [];
   let loaded = false;
 
+  // Collection definitions with display info
+  const COLLECTIONS = {
+    snakes: {
+      name: 'Snakes',
+      icon: '🐍',
+      description: 'Slithering serpents from around the world',
+      filter: (a) => a.type === 'reptile' && (
+        a.name.toLowerCase().includes('snake') ||
+        a.name.toLowerCase().includes('cobra') ||
+        a.name.toLowerCase().includes('mamba') ||
+        a.name.toLowerCase().includes('viper') ||
+        a.name.toLowerCase().includes('adder') ||
+        a.name.toLowerCase().includes('taipan') ||
+        a.name.toLowerCase().includes('anaconda') ||
+        a.name.toLowerCase().includes('boomslang') ||
+        a.name.toLowerCase().includes('lancehead') ||
+        a.name.toLowerCase().includes('cottonmouth') ||
+        a.name.toLowerCase().includes('fer-de-lance')
+      )
+    },
+    frogs: {
+      name: 'Frogs & Toads',
+      icon: '🐸',
+      description: 'Colorful amphibians with surprising powers',
+      filter: (a) => a.type === 'amphibian'
+    },
+    felines: {
+      name: 'Big Cats',
+      icon: '🐆',
+      description: 'Powerful feline predators',
+      filter: (a) => a.type === 'mammal' && (
+        a.name.toLowerCase().includes('leopard') ||
+        a.name.toLowerCase().includes('jaguar') ||
+        a.name.toLowerCase().includes('lion') ||
+        a.name.toLowerCase().includes('tiger') ||
+        a.name.toLowerCase().includes('cheetah') ||
+        a.name.toLowerCase().includes('cougar') ||
+        a.name.toLowerCase().includes('ocelot')
+      )
+    },
+    spiders: {
+      name: 'Spiders & Scorpions',
+      icon: '🕷️',
+      description: 'Eight-legged terrors and stinging arachnids',
+      filter: (a) => a.type === 'arachnid'
+    },
+    sharks: {
+      name: 'Sharks',
+      icon: '🦈',
+      description: 'Apex predators of the ocean',
+      filter: (a) => a.type === 'fish' && a.name.toLowerCase().includes('shark')
+    },
+    birds: {
+      name: 'Birds',
+      icon: '🦅',
+      description: 'Fearsome feathered hunters',
+      filter: (a) => a.type === 'bird'
+    },
+    marine: {
+      name: 'Marine Life',
+      icon: '🐋',
+      description: 'Whales, dolphins, and ocean dwellers',
+      filter: (a) => (
+        (a.type === 'mammal' && a.habitat === 'sea') ||
+        a.type === 'cnidarian' ||
+        a.type === 'mollusk' ||
+        a.type === 'crustacean' ||
+        (a.type === 'fish' && !a.name.toLowerCase().includes('shark'))
+      )
+    },
+    canines: {
+      name: 'Wolves & Dogs',
+      icon: '🐺',
+      description: 'Pack hunters and wild canines',
+      filter: (a) => a.type === 'mammal' && (
+        a.name.toLowerCase().includes('wolf') ||
+        a.name.toLowerCase().includes('dog') ||
+        a.name.toLowerCase().includes('fox') ||
+        a.name.toLowerCase().includes('dhole')
+      )
+    }
+  };
+
+  /**
+   * Get collection for an animal
+   */
+  function getAnimalCollection(animal) {
+    for (const [key, collection] of Object.entries(COLLECTIONS)) {
+      if (collection.filter(animal)) {
+        return key;
+      }
+    }
+    return 'other';
+  }
+
+  /**
+   * Get all collections with their animals
+   */
+  function getCollections() {
+    const result = {};
+    for (const [key, collection] of Object.entries(COLLECTIONS)) {
+      const collectionAnimals = animals.filter(collection.filter);
+      if (collectionAnimals.length > 0) {
+        result[key] = {
+          ...collection,
+          animals: collectionAnimals,
+          count: collectionAnimals.length
+        };
+      }
+    }
+    return result;
+  }
+
+  /**
+   * Get animals by collection key
+   */
+  function getByCollection(collectionKey) {
+    if (collectionKey === 'all') return animals;
+    const collection = COLLECTIONS[collectionKey];
+    if (!collection) return [];
+    return animals.filter(collection.filter);
+  }
+
   /**
    * Load animals from JSON file
    */
@@ -326,7 +449,11 @@ const AnimalData = (function() {
     getByType,
     getRandom,
     getRandomExcluding,
-    shuffle
+    shuffle,
+    getCollections,
+    getByCollection,
+    getAnimalCollection,
+    COLLECTIONS
   };
 })();
 

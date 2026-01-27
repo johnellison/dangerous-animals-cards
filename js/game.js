@@ -17,6 +17,10 @@ const Game = (function() {
   // Response time tracking for spaced repetition
   let guessStartTime = null;
 
+  // Collection state
+  let currentCollection = 'all';
+  let currentFilter = 'all';
+
   /**
    * Initialize game with animal data
    */
@@ -57,9 +61,13 @@ const Game = (function() {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        renderCollection(btn.dataset.filter);
+        currentFilter = btn.dataset.filter;
+        renderCollectionGrid();
       });
     });
+
+    // Collection tabs (will be set up when collection mode is entered)
+    setupCollectionTabs();
 
     // Audio replay button
     const audioReplayBtn = document.querySelector('.audio-replay-btn');
@@ -384,26 +392,78 @@ const Game = (function() {
   // ========================================
 
   /**
+   * Setup collection tabs
+   */
+  function setupCollectionTabs() {
+    const tabsContainer = document.getElementById('collection-tabs');
+    if (!tabsContainer) return;
+
+    // Clear existing tabs (except "All")
+    tabsContainer.innerHTML = `
+      <button class="collection-tab active" data-collection="all">
+        <span class="tab-icon">🌍</span>
+        <span class="tab-name">All</span>
+        <span class="tab-count">${animals.length}</span>
+      </button>
+    `;
+
+    // Add tabs for each collection
+    const collections = AnimalData.getCollections();
+    for (const [key, collection] of Object.entries(collections)) {
+      const tab = document.createElement('button');
+      tab.className = 'collection-tab';
+      tab.dataset.collection = key;
+      tab.innerHTML = `
+        <span class="tab-icon">${collection.icon}</span>
+        <span class="tab-name">${collection.name}</span>
+        <span class="tab-count">${collection.count}</span>
+      `;
+      tabsContainer.appendChild(tab);
+    }
+
+    // Add click handlers
+    tabsContainer.querySelectorAll('.collection-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabsContainer.querySelectorAll('.collection-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentCollection = tab.dataset.collection;
+        renderCollectionGrid();
+      });
+    });
+  }
+
+  /**
    * Render collection grid
    */
   function renderCollection(filter = 'all') {
+    currentFilter = filter;
+    setupCollectionTabs();
+    renderCollectionGrid();
+  }
+
+  /**
+   * Render the collection grid based on current collection and filter
+   */
+  function renderCollectionGrid() {
     const grid = document.getElementById('collection-grid');
     grid.innerHTML = '';
 
     const discovered = Collection.getDiscovered();
 
-    let filteredAnimals = animals;
-    if (filter === 'discovered') {
-      filteredAnimals = animals.filter(a => discovered.includes(a.id));
-    } else if (filter === 'undiscovered') {
-      filteredAnimals = animals.filter(a => !discovered.includes(a.id));
-    } else if (filter === 'due') {
-      // Due for review today
+    // Start with animals in current collection
+    let collectionAnimals = AnimalData.getByCollection(currentCollection);
+
+    // Apply filter
+    let filteredAnimals = collectionAnimals;
+    if (currentFilter === 'discovered') {
+      filteredAnimals = collectionAnimals.filter(a => discovered.includes(a.id));
+    } else if (currentFilter === 'undiscovered') {
+      filteredAnimals = collectionAnimals.filter(a => !discovered.includes(a.id));
+    } else if (currentFilter === 'due') {
       const dueIds = SpacedRepetition.getDueCards();
-      filteredAnimals = animals.filter(a => dueIds.includes(a.id));
-    } else if (filter === 'mastered') {
-      // Mastered cards (interval > 30 days)
-      filteredAnimals = animals.filter(a => SpacedRepetition.getStatus(a.id) === 'mastered');
+      filteredAnimals = collectionAnimals.filter(a => dueIds.includes(a.id));
+    } else if (currentFilter === 'mastered') {
+      filteredAnimals = collectionAnimals.filter(a => SpacedRepetition.getStatus(a.id) === 'mastered');
     }
 
     filteredAnimals.forEach(animal => {
@@ -418,8 +478,8 @@ const Game = (function() {
       grid.appendChild(card);
     });
 
-    // Update progress
-    updateCollectionProgress();
+    // Update progress for current collection
+    updateCollectionProgress(collectionAnimals);
     updateSRStats();
   }
 
@@ -443,9 +503,11 @@ const Game = (function() {
   /**
    * Update collection progress bar
    */
-  function updateCollectionProgress() {
-    const total = animals.length;
-    const discovered = Collection.getCount();
+  function updateCollectionProgress(collectionAnimals = null) {
+    const animalsToCount = collectionAnimals || animals;
+    const total = animalsToCount.length;
+    const discoveredIds = Collection.getDiscovered();
+    const discovered = animalsToCount.filter(a => discoveredIds.includes(a.id)).length;
     const percentage = total > 0 ? (discovered / total) * 100 : 0;
 
     document.getElementById('collection-progress').style.width = `${percentage}%`;

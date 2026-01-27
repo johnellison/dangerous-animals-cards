@@ -1279,5 +1279,467 @@
       "Its beautiful shell makes it deadly - people pick them up and get stung",
       "Scientists use its venom to develop new painkillers"
     ]
+  },
+  {
+    "id": "red-eyed-tree-frog",
+    "name": "Red-Eyed Tree Frog",
+    "epithet": "The Jungle Jewel",
+    "type": "amphibian",
+    "category": "camouflage",
+    "habitat": "forest",
+    "region": "Central America",
+    "rarity": "uncommon",
+    "image": "images/animals/red-eyed-tree-frog.jpg",
+    "stats": {
+      "dangerLevel": 1,
+      "speed": 5,
+      "size": 1
+    },
+    "facts": [
+      "Not poisonous! Its bright colors are a bluff to startle predators",
+      "Sleeps with eyes closed, hiding red eyes under green eyelids",
+      "Can jump over 20 times its own body length"
+    ]
+  },
+  {
+    "id": "tomato-frog",
+    "name": "Tomato Frog",
+    "epithet": "The Red Balloon",
+    "type": "amphibian",
+    "category": "defensive",
+    "habitat": "forest",
+    "region": "Madagascar",
+    "rarity": "uncommon",
+    "image": "images/animals/tomato-frog.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 2,
+      "size": 2
+    },
+    "facts": [
+      "Puffs up like a tomato and secretes a sticky glue when threatened",
+      "Only found on the island of Madagascar",
+      "Females are bright red while males are duller yellow-orange"
+    ]
+  },
+  {
+    "id": "cane-toad",
+    "name": "Cane Toad",
+    "epithet": "The Toxic Invader",
+    "type": "amphibian",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "Americas & Australia",
+    "rarity": "common",
+    "image": "images/animals/cane-toad.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 3,
+      "size": 4
+    },
+    "facts": [
+      "Secretes bufotoxin from glands - deadly to most predators!",
+      "Introduced to Australia in 1935 and became an ecological disaster",
+      "Can eat almost anything including pet food and garbage"
+    ]
+  },
+  {
+    "id": "cougar",
+    "name": "Cougar",
+    "epithet": "The Mountain Ghost",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Americas",
+    "rarity": "uncommon",
+    "image": "images/animals/cougar.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 8,
+      "size": 7
+    },
+    "facts": [
+      "Has the largest range of any wild cat - from Canada to Argentina!",
+      "Cannot roar like big cats - instead they scream, hiss, and purr",
+      "Can leap 5.5 meters straight up from standing"
+    ]
+  },
+  {
+    "id": "ocelot",
+    "name": "Ocelot",
+    "epithet": "The Painted Leopard",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Americas",
+    "rarity": "rare",
+    "image": "images/animals/ocelot.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 7,
+      "size": 4
+    },
+    "facts": [
+      "Salvador Dali kept an ocelot as a pet named Babou",
+      "Each ocelot has a unique pattern like a fingerprint",
+      "Excellent swimmers and climbers - truly versatile hunters"
+    ]
+  },
+  {
+    "id": "brazilian-wandering-spider",
+    "name": "Brazilian Wandering Spider",
+    "epithet": "The Banana Spider",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "South America",
+    "rarity": "rare",
+    "image": "images/animals/brazilian-wandering-spider.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 7,
+      "size": 3
+    },
+    "facts": [
+      "Considered the world's most venomous spider by Guinness Records!",
+      "Wanders the jungle floor at night instead of building webs",
+      "Sometimes hides in banana shipments, surprising workers worldwide"
+    ]
+  },
+  {
+    "id": "black-widow",
+    "name": "Black Widow Spider",
+    "epithet": "The Deadly Dame",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "Worldwide",
+    "rarity": "uncommon",
+    "image": "images/animals/black-widow.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "Venom is 15 times stronger than a rattlesnake's!",
+      "Named because females sometimes eat males after mating",
+      "The red hourglass marking warns predators of its deadly nature"
+    ]
+  },
+  {
+    "id": "brown-recluse",
+    "name": "Brown Recluse Spider",
+    "epithet": "The Fiddleback",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "North America",
+    "rarity": "uncommon",
+    "image": "images/animals/brown-recluse.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "Its bite causes necrosis - flesh literally dies and rots away",
+      "Has only 6 eyes instead of the usual 8 for spiders",
+      "True to its name, it's extremely shy and rarely bites"
+    ]
+  },
+  {
+    "id": "redback-spider",
+    "name": "Redback Spider",
+    "epithet": "Australia's Black Widow",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "Australia",
+    "rarity": "common",
+    "image": "images/animals/redback-spider.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "Responsible for more antivenom doses than any other creature in Australia",
+      "Loves hiding in outdoor toilets - watch where you sit!",
+      "Female is 10 times larger than the male"
+    ]
+  },
+  {
+    "id": "goliath-birdeater",
+    "name": "Goliath Birdeater",
+    "epithet": "The Giant Spider",
+    "type": "arachnid",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "South America",
+    "rarity": "rare",
+    "image": "images/animals/goliath-birdeater.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 5,
+      "size": 5
+    },
+    "facts": [
+      "The largest spider by mass - can weigh 175 grams!",
+      "Leg span can reach 30 cm - the size of a dinner plate",
+      "Despite its name, it rarely eats birds - prefers insects and frogs"
+    ]
+  },
+  {
+    "id": "camel-spider",
+    "name": "Camel Spider",
+    "epithet": "The Desert Nightmare",
+    "type": "arachnid",
+    "category": "predator",
+    "habitat": "desert",
+    "region": "Middle East & Africa",
+    "rarity": "uncommon",
+    "image": "images/animals/camel-spider.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 8,
+      "size": 3
+    },
+    "facts": [
+      "Not actually a spider - belongs to a group called solifuges",
+      "Can run up to 16 km/h - one of the fastest arachnids!",
+      "Has massive jaws that make up 1/3 of its body length"
+    ]
+  },
+  {
+    "id": "deathstalker-scorpion",
+    "name": "Deathstalker Scorpion",
+    "epithet": "The Desert Demon",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "desert",
+    "region": "North Africa & Middle East",
+    "rarity": "uncommon",
+    "image": "images/animals/deathstalker-scorpion.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 5,
+      "size": 2
+    },
+    "facts": [
+      "The most dangerous scorpion in the world!",
+      "Its venom is worth $39 million per gallon for medical research",
+      "Glows bright blue-green under ultraviolet light"
+    ]
+  },
+  {
+    "id": "emperor-scorpion",
+    "name": "Emperor Scorpion",
+    "epithet": "The Gentle Giant",
+    "type": "arachnid",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "West Africa",
+    "rarity": "uncommon",
+    "image": "images/animals/emperor-scorpion.jpg",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 3,
+      "size": 4
+    },
+    "facts": [
+      "One of the largest scorpions but has very mild venom",
+      "Popular as a pet because of its docile nature",
+      "Mothers carry babies on their backs for weeks after birth"
+    ]
+  },
+  {
+    "id": "arizona-bark-scorpion",
+    "name": "Arizona Bark Scorpion",
+    "epithet": "The Climbing Killer",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "desert",
+    "region": "Southwestern USA & Mexico",
+    "rarity": "common",
+    "image": "images/animals/arizona-bark-scorpion.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 5,
+      "size": 2
+    },
+    "facts": [
+      "The most venomous scorpion in North America!",
+      "Can climb walls, trees, and even hang upside down from ceilings",
+      "Stings cause intense pain for 24-72 hours"
+    ]
+  },
+  {
+    "id": "harpy-eagle",
+    "name": "Harpy Eagle",
+    "epithet": "The Flying Wolf",
+    "type": "bird",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Central & South America",
+    "rarity": "legendary",
+    "image": "images/animals/harpy-eagle.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 8,
+      "size": 7
+    },
+    "facts": [
+      "Has talons the size of grizzly bear claws!",
+      "The most powerful eagle in the world - can lift prey equal to its weight",
+      "Named after the harpies of Greek mythology"
+    ]
+  },
+  {
+    "id": "cassowary",
+    "name": "Cassowary",
+    "epithet": "The Dinosaur Bird",
+    "type": "bird",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Australia & New Guinea",
+    "rarity": "rare",
+    "image": "images/animals/cassowary.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 7,
+      "size": 8
+    },
+    "facts": [
+      "Has a 12 cm dagger-like claw that can disembowel with one kick!",
+      "Considered the most dangerous bird in the world",
+      "Its helmet-like casque may help it hear low-frequency sounds"
+    ]
+  },
+  {
+    "id": "secretary-bird",
+    "name": "Secretary Bird",
+    "epithet": "The Snake Stomper",
+    "type": "bird",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Africa",
+    "rarity": "uncommon",
+    "image": "images/animals/secretary-bird.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 6,
+      "size": 6
+    },
+    "facts": [
+      "Kicks with 5 times its own body weight - enough to shatter bones!",
+      "Specializes in hunting venomous snakes including cobras",
+      "Named for its quill-like head feathers resembling old-time clerks"
+    ]
+  },
+  {
+    "id": "shortfin-mako",
+    "name": "Shortfin Mako Shark",
+    "epithet": "The Peregrine of the Sea",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Worldwide Oceans",
+    "rarity": "rare",
+    "image": "images/animals/shortfin-mako.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 10,
+      "size": 8
+    },
+    "facts": [
+      "The fastest shark in the ocean - can reach 74 km/h!",
+      "Can leap up to 6 meters out of the water",
+      "Has been clocked at bursts of up to 96 km/h"
+    ]
+  },
+  {
+    "id": "goblin-shark",
+    "name": "Goblin Shark",
+    "epithet": "The Living Fossil",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Deep Ocean Worldwide",
+    "rarity": "legendary",
+    "image": "images/animals/goblin-shark.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 4,
+      "size": 7
+    },
+    "facts": [
+      "Its lineage dates back 125 million years - older than dinosaurs!",
+      "Has a jaw that shoots forward like a slingshot to catch prey",
+      "Lives so deep it's pink because blood vessels show through its skin"
+    ]
+  },
+  {
+    "id": "thresher-shark",
+    "name": "Thresher Shark",
+    "epithet": "The Tail Whipper",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Worldwide Oceans",
+    "rarity": "uncommon",
+    "image": "images/animals/thresher-shark.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 8,
+      "size": 8
+    },
+    "facts": [
+      "Uses its incredibly long tail to whip and stun fish!",
+      "Tail can be as long as its entire body",
+      "One of the only sharks that can breach completely out of water"
+    ]
+  },
+  {
+    "id": "oceanic-whitetip",
+    "name": "Oceanic Whitetip Shark",
+    "epithet": "The Shipwreck Shark",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Tropical Oceans",
+    "rarity": "rare",
+    "image": "images/animals/oceanic-whitetip.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 6,
+      "size": 7
+    },
+    "facts": [
+      "Blamed for more human deaths than all other sharks combined!",
+      "Historically attacked survivors of ship and plane wrecks",
+      "Jacques Cousteau called it 'the most dangerous of all sharks'"
+    ]
+  },
+  {
+    "id": "blue-shark",
+    "name": "Blue Shark",
+    "epithet": "The Ocean Wanderer",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Worldwide Oceans",
+    "rarity": "common",
+    "image": "images/animals/blue-shark.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 7,
+      "size": 7
+    },
+    "facts": [
+      "Migrates farther than any other shark - up to 9,000 km!",
+      "Has a stunning indigo blue color on its back",
+      "Can have litters of over 100 pups at once"
+    ]
   }
 ]
