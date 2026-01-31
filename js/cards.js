@@ -238,6 +238,7 @@ const CardRenderer = (function() {
    * Play sound effect
    */
   function playSound(soundName) {
+    if (typeof AudioManager !== 'undefined' && AudioManager.isMuted()) return;
     const audio = document.getElementById(`${soundName}-sound`);
     if (audio) {
       audio.currentTime = 0;

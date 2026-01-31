@@ -19,6 +19,27 @@ const AudioManager = (function() {
   // Track if audio has been unlocked (requires user interaction on mobile)
   let audioUnlocked = false;
 
+  // Global mute state (persisted in localStorage)
+  let muted = localStorage.getItem('audioMuted') === 'true';
+
+  // Web Audio context for synthesized sounds
+  let audioContext = null;
+
+  function getAudioContext() {
+    if (!audioContext) {
+      try {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      } catch (e) {
+        console.warn('Web Audio API not available');
+        return null;
+      }
+    }
+    if (audioContext.state === 'suspended') {
+      audioContext.resume();
+    }
+    return audioContext;
+  }
+
   /**
    * Initialize audio pool
    */
@@ -121,6 +142,7 @@ const AudioManager = (function() {
    */
   function playAnimalAudio(animalId, type = 'intro') {
     return new Promise((resolve, reject) => {
+      if (muted) return resolve();
       const path = getAnimalAudioPath(animalId, type);
 
       // Check if preloaded
@@ -162,43 +184,159 @@ const AudioManager = (function() {
   }
 
   /**
-   * Play celebration sound
+   * Play celebration sound using Web Audio API synthesis
    * @param {string} type - Celebration type: 'confetti', 'laser', 'fireworks', 'whipped-cream'
    * @returns {Promise} Resolves when playback completes
    */
   function playCelebration(type) {
     return new Promise((resolve) => {
-      const path = getCelebrationAudioPath(type);
-      const audio = getAudioElement();
-      audio.src = path;
-      audio.currentTime = 0;
+      if (muted) return resolve();
+      const ctx = getAudioContext();
+      if (!ctx) return resolve();
 
-      const handleEnd = () => {
-        cleanup();
-        resolve();
-      };
+      try {
+        switch (type) {
+          case 'confetti':
+            synthConfetti(ctx);
+            break;
+          case 'laser':
+            synthLaser(ctx);
+            break;
+          case 'fireworks':
+            synthFireworks(ctx);
+            break;
+          case 'whipped-cream':
+            synthWhippedCream(ctx);
+            break;
+        }
+      } catch (e) {
+        console.warn('Celebration sound synthesis failed:', e);
+      }
 
-      const handleError = () => {
-        cleanup();
-        // Graceful fallback
-        console.warn(`Celebration audio not found: ${path}`);
-        resolve();
-      };
-
-      const cleanup = () => {
-        audio.removeEventListener('ended', handleEnd);
-        audio.removeEventListener('error', handleError);
-      };
-
-      audio.addEventListener('ended', handleEnd);
-      audio.addEventListener('error', handleError);
-
-      audio.play().catch(err => {
-        cleanup();
-        console.warn('Celebration audio blocked:', err.message);
-        resolve();
-      });
+      // Resolve after typical sound duration
+      setTimeout(resolve, 1000);
     });
+  }
+
+  /**
+   * Confetti: rapid ascending sparkle pops
+   */
+  function synthConfetti(ctx) {
+    const now = ctx.currentTime;
+    for (let i = 0; i < 8; i++) {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(1000 + i * 400, now + i * 0.07);
+      osc.frequency.exponentialRampToValueAtTime(2000 + i * 500, now + i * 0.07 + 0.05);
+      gain.gain.setValueAtTime(0.15, now + i * 0.07);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.07 + 0.1);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now + i * 0.07);
+      osc.stop(now + i * 0.07 + 0.12);
+    }
+  }
+
+  /**
+   * Laser: sawtooth sweep from high to low
+   */
+  function synthLaser(ctx) {
+    const now = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(2000, now);
+    osc.frequency.exponentialRampToValueAtTime(200, now + 0.4);
+    gain.gain.setValueAtTime(0.2, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(now);
+    osc.stop(now + 0.5);
+  }
+
+  /**
+   * Fireworks: low boom + white noise crackle
+   */
+  function synthFireworks(ctx) {
+    const now = ctx.currentTime;
+    // Low boom
+    const boom = ctx.createOscillator();
+    const boomGain = ctx.createGain();
+    boom.type = 'sine';
+    boom.frequency.setValueAtTime(80, now);
+    boom.frequency.exponentialRampToValueAtTime(40, now + 0.3);
+    boomGain.gain.setValueAtTime(0.3, now);
+    boomGain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+    boom.connect(boomGain);
+    boomGain.connect(ctx.destination);
+    boom.start(now);
+    boom.stop(now + 0.4);
+
+    // Crackle (noise burst)
+    const bufferSize = ctx.sampleRate * 0.5;
+    const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / bufferSize, 3);
+    }
+    const noise = ctx.createBufferSource();
+    noise.buffer = buffer;
+    const noiseGain = ctx.createGain();
+    noiseGain.gain.setValueAtTime(0.15, now + 0.1);
+    noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'highpass';
+    filter.frequency.value = 1000;
+    noise.connect(filter);
+    filter.connect(noiseGain);
+    noiseGain.connect(ctx.destination);
+    noise.start(now + 0.1);
+    noise.stop(now + 0.7);
+  }
+
+  /**
+   * Whipped cream: noise burst through low-pass filter + high shimmer
+   */
+  function synthWhippedCream(ctx) {
+    const now = ctx.currentTime;
+    // Noise burst through low-pass filter (whoosh)
+    const bufferSize = ctx.sampleRate * 0.6;
+    const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+      data[i] = Math.random() * 2 - 1;
+    }
+    const noise = ctx.createBufferSource();
+    noise.buffer = buffer;
+    const lpf = ctx.createBiquadFilter();
+    lpf.type = 'lowpass';
+    lpf.frequency.setValueAtTime(500, now);
+    lpf.frequency.linearRampToValueAtTime(2000, now + 0.3);
+    lpf.frequency.linearRampToValueAtTime(300, now + 0.6);
+    const noiseGain = ctx.createGain();
+    noiseGain.gain.setValueAtTime(0.2, now);
+    noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+    noise.connect(lpf);
+    lpf.connect(noiseGain);
+    noiseGain.connect(ctx.destination);
+    noise.start(now);
+    noise.stop(now + 0.6);
+
+    // High shimmer tones
+    for (let i = 0; i < 4; i++) {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(3000 + i * 500, now + 0.1 + i * 0.08);
+      gain.gain.setValueAtTime(0.08, now + 0.1 + i * 0.08);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.3 + i * 0.08);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now + 0.1 + i * 0.08);
+      osc.stop(now + 0.35 + i * 0.08);
+    }
   }
 
   /**
@@ -228,6 +366,23 @@ const AudioManager = (function() {
   }
 
   /**
+   * Toggle global mute on/off
+   */
+  function toggleMute() {
+    muted = !muted;
+    localStorage.setItem('audioMuted', muted);
+    if (muted) stopAll();
+    return muted;
+  }
+
+  /**
+   * Check if audio is muted
+   */
+  function isMuted() {
+    return muted;
+  }
+
+  /**
    * Clear preloaded audio cache
    */
   function clearCache() {
@@ -247,6 +402,8 @@ const AudioManager = (function() {
     stopAll,
     isPlaying,
     setVolume,
+    toggleMute,
+    isMuted,
     clearCache,
     ANIMAL_AUDIO_TYPES,
     CELEBRATION_TYPES

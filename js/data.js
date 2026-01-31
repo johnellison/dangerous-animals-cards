@@ -86,6 +86,18 @@ const AnimalData = (function() {
         a.name.toLowerCase().includes('fox') ||
         a.name.toLowerCase().includes('dhole')
       )
+    },
+    australian: {
+      name: 'Australian Animals',
+      icon: '🦘',
+      description: 'Amazing creatures from the land down under',
+      filter: (a) => a.region.toLowerCase().includes('australia')
+    },
+    insects: {
+      name: 'Insects & Bugs',
+      icon: '🐛',
+      description: 'Six-legged wonders and tiny terrors',
+      filter: (a) => a.type === 'insect'
     }
   };
 

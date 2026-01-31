@@ -13,6 +13,16 @@
     const animals = await AnimalData.loadAnimals();
     console.log(`✅ Loaded ${animals.length} dangerous animals`);
 
+    // Setup audio toggle
+    const audioToggle = document.getElementById('audio-toggle');
+    if (AudioManager.isMuted()) {
+      audioToggle.classList.add('muted');
+    }
+    audioToggle.addEventListener('click', () => {
+      const nowMuted = AudioManager.toggleMute();
+      audioToggle.classList.toggle('muted', nowMuted);
+    });
+
     // Initialize game
     Game.init(animals);
 
@@ -42,8 +52,11 @@
 
   // Register Service Worker for PWA (optional, for future)
   if ('serviceWorker' in navigator) {
-    // Uncomment when ready to add offline support
-    // navigator.serviceWorker.register('/sw.js');
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      console.log('Service Worker registered:', reg.scope);
+    }).catch(err => {
+      console.warn('Service Worker registration failed:', err);
+    });
   }
 
   // Prevent pull-to-refresh on mobile

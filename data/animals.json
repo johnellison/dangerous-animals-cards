@@ -1289,7 +1289,7 @@
     "habitat": "forest",
     "region": "Central America",
     "rarity": "uncommon",
-    "image": "images/animals/red-eyed-tree-frog.jpg",
+    "image": "images/animals/red-eyed-tree-frog.png",
     "stats": {
       "dangerLevel": 1,
       "speed": 5,
@@ -1667,7 +1667,7 @@
     "habitat": "sea",
     "region": "Deep Ocean Worldwide",
     "rarity": "legendary",
-    "image": "images/animals/goblin-shark.jpg",
+    "image": "images/animals/goblin-shark.png",
     "stats": {
       "dangerLevel": 4,
       "speed": 4,
@@ -1740,6 +1740,300 @@
       "Migrates farther than any other shark - up to 9,000 km!",
       "Has a stunning indigo blue color on its back",
       "Can have litters of over 100 pups at once"
+    ]
+  },
+  {
+    "id": "golden-tailed-gecko",
+    "name": "Golden-Tailed Gecko",
+    "epithet": "The Sticky Squirter",
+    "type": "reptile",
+    "category": "defensive",
+    "habitat": "forest",
+    "region": "Australia",
+    "rarity": "uncommon",
+    "image": "images/animals/golden-tailed-gecko.jpg",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 5,
+      "size": 2
+    },
+    "facts": [
+      "Can squirt sticky, smelly fluid from glands in its tail to scare off predators!",
+      "Its tail is covered in tiny golden spines that give it a shimmering appearance",
+      "Unlike most geckos, it lives in trees and shrubs rather than on rocks or walls"
+    ]
+  },
+  {
+    "id": "cardboard-frog",
+    "name": "Cardboard Frog",
+    "epithet": "The Hip-Pocket Dad",
+    "type": "amphibian",
+    "category": "defensive",
+    "habitat": "forest",
+    "region": "Eastern Australia",
+    "rarity": "rare",
+    "image": "images/animals/cardboard-frog.jpg",
+    "stats": {
+      "dangerLevel": 1,
+      "speed": 3,
+      "size": 1
+    },
+    "facts": [
+      "Males carry their tadpoles in special hip pouches - the only frog in the world to do this!",
+      "One of the smallest frogs in Australia at only 2 cm long",
+      "Also called the hip-pocket frog because of its amazing dad-pouch superpower"
+    ]
+  },
+  {
+    "id": "frill-necked-lizard",
+    "name": "Frill-Necked Lizard",
+    "epithet": "The Frilled Fury",
+    "type": "reptile",
+    "category": "defensive",
+    "habitat": "land",
+    "region": "Northern Australia & New Guinea",
+    "rarity": "uncommon",
+    "image": "images/animals/frill-necked-lizard.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 7,
+      "size": 4
+    },
+    "facts": [
+      "Opens a huge colorful frill around its neck to look bigger and scare predators!",
+      "Can run on its two back legs at high speed - like a tiny dinosaur!",
+      "Featured on the Australian 2-cent coin before it was discontinued"
+    ]
+  },
+  {
+    "id": "blue-banded-bee",
+    "name": "Blue Banded Bee",
+    "epithet": "The Buzz Bomber",
+    "type": "insect",
+    "category": "defensive",
+    "habitat": "land",
+    "region": "Australia",
+    "rarity": "uncommon",
+    "image": "images/animals/blue-banded-bee.jpg",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 6,
+      "size": 1
+    },
+    "facts": [
+      "Has stunning metallic blue stripes instead of the usual yellow - nature's punk rocker!",
+      "Buzz pollinates flowers by vibrating 350 times per second - that helps grow better tomatoes!",
+      "Unlike honeybees, it's a solitary bee that builds its own tiny mud nest"
+    ]
+  },
+  {
+    "id": "green-tree-python",
+    "name": "Green Tree Python",
+    "epithet": "The Emerald Coil",
+    "type": "reptile",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Australia & Papua New Guinea",
+    "rarity": "rare",
+    "image": "images/animals/green-tree-python.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 5,
+      "size": 5
+    },
+    "facts": [
+      "Babies are born bright yellow or red and turn vivid green as they grow up!",
+      "Drapes its body in perfect coils over branches like a living necklace",
+      "Uses heat-sensing pits along its lips to detect warm-blooded prey in total darkness"
+    ]
+  },
+  {
+    "id": "bulloak-jewel-butterfly",
+    "name": "Bulloak Jewel Butterfly",
+    "epithet": "The Vanishing Gem",
+    "type": "insect",
+    "category": "camouflage",
+    "habitat": "forest",
+    "region": "Queensland, Australia",
+    "rarity": "legendary",
+    "image": "images/animals/bulloak-jewel-butterfly.jpg",
+    "stats": {
+      "dangerLevel": 1,
+      "speed": 4,
+      "size": 1
+    },
+    "facts": [
+      "One of Australia's rarest butterflies - critically endangered with very few left!",
+      "Can only survive if both bulloak trees AND a specific species of ant are present",
+      "Its caterpillars are adopted by ants and raised inside their nests like secret guests!"
+    ]
+  },
+  {
+    "id": "tree-iguana",
+    "name": "Tree Iguana",
+    "epithet": "The Treetop Diver",
+    "type": "reptile",
+    "category": "defensive",
+    "habitat": "forest",
+    "region": "Central & South America",
+    "rarity": "common",
+    "image": "images/animals/tree-iguana.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 5,
+      "size": 6
+    },
+    "facts": [
+      "Can fall 15 meters from a tree and land without getting hurt!",
+      "Excellent swimmers that can hold their breath underwater for up to 30 minutes",
+      "Has a third eye on top of its head that senses light and shadows from above"
+    ]
+  },
+  {
+    "id": "blue-tongued-lizard",
+    "name": "Blue-Tongued Lizard",
+    "epithet": "The Garden Guardian",
+    "type": "reptile",
+    "category": "defensive",
+    "habitat": "land",
+    "region": "Australia",
+    "rarity": "common",
+    "image": "images/animals/blue-tongued-lizard.jpg",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 3,
+      "size": 4
+    },
+    "facts": [
+      "Flashes its bright blue tongue to startle and confuse predators - surprise!",
+      "One of the most commonly found reptiles in Australian backyards and gardens",
+      "Gives birth to live babies instead of laying eggs - up to 25 at a time!"
+    ]
+  },
+  {
+    "id": "australian-tiger-moth",
+    "name": "Australian Tiger Moth",
+    "epithet": "The Sonar Jammer",
+    "type": "insect",
+    "category": "defensive",
+    "habitat": "land",
+    "region": "Australia",
+    "rarity": "uncommon",
+    "image": "images/animals/australian-tiger-moth.jpg",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 5,
+      "size": 1
+    },
+    "facts": [
+      "Some species can produce ultrasound clicks to jam bat sonar - like a stealth fighter!",
+      "Has bright warning colors that tell predators: 'I taste TERRIBLE!'",
+      "Its hairy caterpillars can cause skin irritation if you touch them"
+    ]
+  },
+  {
+    "id": "red-hornet",
+    "name": "Red Hornet",
+    "epithet": "The Crimson Swarm",
+    "type": "insect",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "Asia",
+    "rarity": "rare",
+    "image": "images/animals/red-hornet.webp",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 7,
+      "size": 1
+    },
+    "facts": [
+      "Delivers an incredibly painful sting that can cause severe allergic reactions!",
+      "Can be extremely aggressive when defending their nest as a swarm",
+      "Their nests can house thousands of hornets working together like a tiny angry army"
+    ]
+  },
+  {
+    "id": "indian-red-scorpion",
+    "name": "Indian Red Scorpion",
+    "epithet": "The Lethal Stinger",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "India & Pakistan",
+    "rarity": "rare",
+    "image": "images/animals/indian-red-scorpion.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 4,
+      "size": 2
+    },
+    "facts": [
+      "Considered one of the most lethal scorpions in the world!",
+      "Its venom can cause fluid to fill the lungs - called pulmonary edema",
+      "Despite its name, it ranges from orange to brown and is not always red"
+    ]
+  },
+  {
+    "id": "fattail-scorpion",
+    "name": "Fattail Scorpion",
+    "epithet": "The Man-Killer",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "desert",
+    "region": "North Africa & Middle East",
+    "rarity": "rare",
+    "image": "images/animals/fattail-scorpion.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 5,
+      "size": 2
+    },
+    "facts": [
+      "Its scientific name Androctonus literally means 'man-killer' in Greek!",
+      "Responsible for the majority of scorpion-related deaths in North Africa",
+      "Has a thick, powerful tail that can deliver venom with lightning speed"
+    ]
+  },
+  {
+    "id": "striped-bark-scorpion",
+    "name": "Striped Bark Scorpion",
+    "epithet": "The Backyard Lurker",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "Southern USA & Mexico",
+    "rarity": "common",
+    "image": "images/animals/striped-bark-scorpion.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 5,
+      "size": 2
+    },
+    "facts": [
+      "The most commonly encountered scorpion in the United States!",
+      "Loves hiding in shoes, clothing, and bedding - always shake before wearing!",
+      "Glows a bright blue-green under ultraviolet light like a tiny alien"
+    ]
+  },
+  {
+    "id": "yellow-scorpion",
+    "name": "Yellow Scorpion",
+    "epithet": "The Desert Shadow",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "desert",
+    "region": "Middle East & North Africa",
+    "rarity": "uncommon",
+    "image": "images/animals/yellow-scorpion.jpeg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 5,
+      "size": 2
+    },
+    "facts": [
+      "Its pale yellow color is perfect camouflage against desert sand!",
+      "Can survive for months without food by slowing its metabolism to a crawl",
+      "Has special comb-like organs on its belly that sense vibrations in the ground"
     ]
   }
 ]

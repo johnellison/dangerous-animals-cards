@@ -185,8 +185,12 @@ const Game = (function() {
       CardRenderer.flipCard(card, () => {
         // Mark as discovered
         const wasNew = Collection.discover(animal.id);
-        if (wasNew && animal.rarity === 'legendary') {
-          CardRenderer.celebrate();
+        if (wasNew) {
+          if (animal.rarity === 'legendary' || animal.rarity === 'rare') {
+            CardRenderer.celebrate();
+          } else if (Math.random() < 0.15) {
+            CardRenderer.celebrate();
+          }
         }
       }, animal.id); // Pass animal ID for audio playback
     } else {
@@ -331,7 +335,7 @@ const Game = (function() {
       CardRenderer.playSound('correct');
 
       // Celebrate for streak milestones
-      if (streak % 5 === 0) {
+      if (streak > 0 && streak % 3 === 0) {
         CardRenderer.celebrate();
       }
     } else {
