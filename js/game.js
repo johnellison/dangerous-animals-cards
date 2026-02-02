@@ -25,7 +25,7 @@ const Game = (function() {
    * Initialize game with animal data
    */
   function init(animalData) {
-    animals = animalData;
+    animals = AnimalData.shuffle([...animalData]);
     Collection.load();
     setupEventListeners();
     updateCardCounter();
@@ -103,21 +103,35 @@ const Game = (function() {
    * Setup swipe gestures for touch devices
    */
   function setupSwipeGestures() {
-    const cardStage = document.querySelector('.card-stage');
+    const discoverMode = document.getElementById('discover-mode');
+    const card = document.getElementById('main-card');
     let touchStartX = 0;
-    let touchEndX = 0;
+    let touchCurrentX = 0;
+    let isSwiping = false;
 
-    cardStage.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
+    discoverMode.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].clientX;
+      touchCurrentX = touchStartX;
+      isSwiping = true;
+      card.style.transition = 'none';
     }, { passive: true });
 
-    cardStage.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
+    discoverMode.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      touchCurrentX = e.changedTouches[0].clientX;
+      const diff = touchCurrentX - touchStartX;
+      // Dampen the drag so it feels natural
+      const dampened = diff * 0.4;
+      card.style.transform = `translateX(${dampened}px) rotate(${dampened * 0.05}deg)`;
     }, { passive: true });
 
-    function handleSwipe() {
-      const diff = touchStartX - touchEndX;
+    discoverMode.addEventListener('touchend', (e) => {
+      if (!isSwiping) return;
+      isSwiping = false;
+      const diff = touchStartX - touchCurrentX;
+      card.style.transition = 'transform 0.3s ease';
+      card.style.transform = '';
+
       if (Math.abs(diff) > 50) {
         if (diff > 0) {
           nextCard();
@@ -125,7 +139,7 @@ const Game = (function() {
           prevCard();
         }
       }
-    }
+    }, { passive: true });
   }
 
   /**
@@ -205,6 +219,8 @@ const Game = (function() {
   function prevCard() {
     if (animals.length === 0) return;
 
+    if (typeof AudioManager !== 'undefined') AudioManager.stopAll();
+
     const card = document.getElementById('main-card');
     CardRenderer.unflipCard(card);
 
@@ -219,6 +235,8 @@ const Game = (function() {
    */
   function nextCard() {
     if (animals.length === 0) return;
+
+    if (typeof AudioManager !== 'undefined') AudioManager.stopAll();
 
     const card = document.getElementById('main-card');
     CardRenderer.unflipCard(card);

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dangerous-animals-v1';
+const CACHE_NAME = 'dangerous-animals-v2';
 
 const CORE_ASSETS = [
   'index.html',

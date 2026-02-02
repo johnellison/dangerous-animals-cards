@@ -259,6 +259,11 @@ button {
 /* ================================
    Discovery Mode
    ================================ */
+.discover-mode {
+  justify-content: center;
+  overflow: hidden;
+}
+
 .card-carousel {
   display: flex;
   align-items: center;
@@ -267,6 +272,8 @@ button {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  flex: 1;
+  min-height: 0;
 }
 
 .carousel-btn {
@@ -301,76 +308,86 @@ button {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 0;
 }
 
 .card-counter {
-  margin-top: var(--space-lg);
-  font-size: var(--text-lg);
+  margin-top: var(--space-sm);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
   font-weight: 600;
-}
-
-.card-counter .current {
-  color: var(--color-primary);
-  font-size: var(--text-xl);
+  flex-shrink: 0;
 }
 
 /* ================================
    Guess Mode
    ================================ */
 .guess-mode {
-  gap: var(--space-lg);
+  gap: var(--space-sm);
+  justify-content: center;
+  overflow: hidden;
 }
 
 .guess-card-stage {
   perspective: 1000px;
   width: 100%;
   max-width: 320px;
+  flex-shrink: 1;
+  min-height: 0;
+}
+
+/* Let card fill the stage height instead of using fixed aspect-ratio */
+.guess-card {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.guess-card .card-inner {
+  height: 100%;
+}
+
+.guess-card .card-front,
+.guess-card .card-back {
+  height: 100%;
+}
+
+.guess-card .card-photo-frame {
+  height: 100%;
+}
+
+.guess-card .card-image-wrapper {
+  flex: 1;
+  min-height: 0;
 }
 
 .guess-prompt {
   font-family: var(--font-display);
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   color: var(--color-primary);
   text-align: center;
-  margin-top: var(--space-md);
-}
-
-.silhouette-container {
-  width: 100%;
-  aspect-ratio: 4/3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-
-.silhouette-image {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  filter: brightness(0) invert(0);
+  padding: var(--space-sm);
 }
 
 .guess-options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
+  gap: var(--space-sm);
   width: 100%;
   max-width: 400px;
+  flex-shrink: 0;
 }
 
 .guess-option {
-  padding: var(--space-md) var(--space-lg);
-  font-size: var(--text-base);
+  padding: 10px var(--space-md);
+  font-size: var(--text-sm);
   font-weight: 700;
   border-radius: var(--radius-lg);
   background: var(--color-surface-elevated);
   border: 2px solid var(--card-border);
   transition: all var(--transition-base);
   text-align: center;
+  min-height: 44px;
 }
 
 .guess-option:hover:not(:disabled) {
@@ -398,12 +415,14 @@ button {
 .guess-result {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-sm);
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   font-weight: 700;
-  min-height: 40px;
+  min-height: 28px;
   opacity: 0;
   transition: opacity var(--transition-base);
+  flex-shrink: 0;
 }
 
 .guess-result.show {
@@ -423,8 +442,9 @@ button {
 .guess-score {
   display: flex;
   gap: var(--space-lg);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: var(--color-text-muted);
+  flex-shrink: 0;
 }
 
 .score-value, .streak-value {
@@ -433,8 +453,8 @@ button {
 }
 
 .next-guess-btn {
-  padding: var(--space-md) var(--space-2xl);
-  font-size: var(--text-lg);
+  padding: 10px var(--space-xl);
+  font-size: var(--text-base);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -443,6 +463,8 @@ button {
   color: #000;
   transition: all var(--transition-base);
   display: none;
+  min-height: 44px;
+  flex-shrink: 0;
 }
 
 .next-guess-btn.show {
@@ -747,6 +769,57 @@ button {
 /* ================================
    Responsive Adjustments
    ================================ */
+
+/* Mobile-first: fit guess mode on screen without scrolling */
+@media (max-width: 767px) {
+  .header {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .header-top {
+    margin-bottom: 4px;
+  }
+
+  .logo {
+    font-size: var(--text-lg);
+  }
+
+  .nav-btn {
+    padding: 6px var(--space-md);
+    font-size: var(--text-xs);
+  }
+
+  .main {
+    padding: var(--space-sm) var(--space-sm);
+  }
+
+  /* Hide carousel arrows on mobile - swipe to navigate */
+  .carousel-btn {
+    display: none;
+  }
+
+  .card-carousel {
+    gap: 0;
+  }
+
+  /* Maximize card on mobile */
+  .discover-mode {
+    height: calc(100dvh - 90px);
+    max-height: calc(100dvh - 90px);
+  }
+
+  .discover-mode .card {
+    max-width: 100%;
+  }
+
+  /* Make guess mode fill available viewport height */
+  .guess-mode {
+    height: calc(100dvh - 90px);
+    max-height: calc(100dvh - 90px);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+}
+
 @media (min-width: 768px) {
   .header {
     flex-direction: row;

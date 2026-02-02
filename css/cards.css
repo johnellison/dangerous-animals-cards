@@ -383,7 +383,7 @@
    Silhouette Mode (Guess Game)
    ================================ */
 .card-photo-frame.silhouette-mode .card-photo {
-  filter: brightness(0);
+  /* No filter - show full image for young kids learning animals */
 }
 
 .guess-prompt {
