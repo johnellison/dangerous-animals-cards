@@ -1,16 +1,19 @@
-const CACHE_NAME = 'dangerous-animals-v2';
+const CACHE_NAME = 'wild-animal-cards-v1';
 
 const CORE_ASSETS = [
+  'landing.html',
   'index.html',
   'css/main.css',
   'css/cards.css',
   'css/animations.css',
+  'css/landing.css',
   'js/data.js',
   'js/spaced-repetition.js',
   'js/audio.js',
   'js/cards.js',
   'js/game.js',
   'js/app.js',
+  'js/landing.js',
   'data/animals.json'
 ];
 

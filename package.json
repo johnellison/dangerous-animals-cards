@@ -1,7 +1,7 @@
 {
-  "name": "dangerous-animals-cards",
+  "name": "wild-animal-cards",
   "version": "1.0.0",
-  "description": "Dangerous Animals Card Game with voice narration",
+  "description": "Wild Animal Cards - Discover, guess, and collect amazing animals",
   "type": "module",
   "scripts": {
     "create-voice": "node scripts/create-voice-clone.js",

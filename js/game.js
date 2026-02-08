@@ -148,6 +148,8 @@ const Game = (function() {
   function switchMode(mode) {
     currentMode = mode;
 
+    if (typeof AudioManager !== 'undefined') AudioManager.stopAll();
+
     // Update nav buttons
     document.querySelectorAll('.nav-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.mode === mode);
@@ -263,6 +265,7 @@ const Game = (function() {
    * Start a new guess round
    */
   function startGuessRound() {
+    if (typeof AudioManager !== 'undefined') AudioManager.stopAll();
     hasGuessed = false;
     guessStartTime = Date.now(); // Track response time for SR
 

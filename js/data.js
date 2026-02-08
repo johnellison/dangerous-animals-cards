@@ -98,6 +98,12 @@ const AnimalData = (function() {
       icon: '🐛',
       description: 'Six-legged wonders and tiny terrors',
       filter: (a) => a.type === 'insect'
+    },
+    centipedes: {
+      name: 'Centipedes',
+      icon: '🐛',
+      description: 'Venomous many-legged predators that hunt bats, snakes, and more',
+      filter: (a) => a.type === 'centipede'
     }
   };
 
@@ -474,7 +480,8 @@ const AnimalData = (function() {
  * Handles saving and loading player progress
  */
 const Collection = (function() {
-  const STORAGE_KEY = 'dangerous_animals_collection';
+  const STORAGE_KEY = 'wild_animal_cards_collection';
+  const OLD_STORAGE_KEY = 'dangerous_animals_collection';
 
   let discovered = new Set();
   let stats = {
@@ -486,9 +493,25 @@ const Collection = (function() {
   };
 
   /**
+   * Migrate data from old localStorage key if needed
+   */
+  function migrate() {
+    try {
+      if (!localStorage.getItem(STORAGE_KEY) && localStorage.getItem(OLD_STORAGE_KEY)) {
+        localStorage.setItem(STORAGE_KEY, localStorage.getItem(OLD_STORAGE_KEY));
+        localStorage.removeItem(OLD_STORAGE_KEY);
+        console.log('Migrated collection data to new key');
+      }
+    } catch (error) {
+      console.error('Error migrating collection data:', error);
+    }
+  }
+
+  /**
    * Load progress from localStorage
    */
   function load() {
+    migrate();
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {

@@ -2035,5 +2035,236 @@
       "Can survive for months without food by slowing its metabolism to a crawl",
       "Has special comb-like organs on its belly that sense vibrations in the ground"
     ]
+  },
+  {
+    "id": "amazonian-green-horned-centipede",
+    "name": "Amazonian Green-Horned Centipede",
+    "epithet": "The Bat Snatcher",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Brazil & Amazon Rainforest",
+    "rarity": "rare",
+    "image": "images/animals/amazonian-green-horned-centipede.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 7,
+      "size": 6
+    },
+    "facts": [
+      "Climbs walls and cave ceilings to snatch bats right out of the air",
+      "Uses its back legs to anchor to surfaces while its front body dangles to catch flying prey",
+      "Recently documented by scientists on ResearchGate hunting bats in wooden structures and caves"
+    ]
+  },
+  {
+    "id": "giant-desert-centipede",
+    "name": "Giant Desert Centipede",
+    "epithet": "The Canyon Stalker",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "desert",
+    "region": "Southwestern USA & Northern Mexico",
+    "rarity": "uncommon",
+    "image": "images/animals/giant-desert-centipede.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 7,
+      "size": 6
+    },
+    "facts": [
+      "Observed in Palo Duro Canyon, Texas, preying on bats hiding in rock crevices",
+      "The largest centipede in North America, reaching up to 20 cm long",
+      "Has a painful venomous bite that causes intense swelling and pain lasting for days"
+    ]
+  },
+  {
+    "id": "amazonian-giant-centipede",
+    "name": "Amazonian Giant Centipede",
+    "epithet": "The Cave Ceiling Hunter",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Venezuela, Colombia & Brazil",
+    "rarity": "legendary",
+    "image": "images/animals/amazonian-giant-centipede.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 7,
+      "size": 8
+    },
+    "facts": [
+      "The largest centipede in the world at 30 cm — it hangs from cave ceilings to catch flying bats",
+      "The only centipede species confirmed to have caused a human death",
+      "Can kill and eat tarantulas, snakes, lizards, frogs, birds, and mice"
+    ]
+  },
+  {
+    "id": "vietnamese-centipede",
+    "name": "Vietnamese Centipede",
+    "epithet": "The Spooky Toxin",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Southeast Asia & Hawaii",
+    "rarity": "rare",
+    "image": "images/animals/vietnamese-centipede.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 8,
+      "size": 7
+    },
+    "facts": [
+      "Can kill a mouse 15 times its own weight in just 30 seconds using 'Spooky Toxin'",
+      "Its venom simultaneously shuts down the heart, lungs, muscles, and nervous system",
+      "A specimen found in Hawaii measured 36.6 cm — possibly the largest individual centipede ever"
+    ]
+  },
+  {
+    "id": "asian-forest-centipede",
+    "name": "Asian Forest Centipede",
+    "epithet": "The Lightning Strike",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Thailand, Vietnam & Southeast Asia",
+    "rarity": "rare",
+    "image": "images/animals/asian-forest-centipede.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 9,
+      "size": 7
+    },
+    "facts": [
+      "Strikes faster than the human eye can track — from motionless to full speed in an instant",
+      "Its venom contains cardiotoxin that can cause tissue death and severe allergic reactions",
+      "Actively patrols its territory at night rather than waiting in ambush like other centipedes"
+    ]
+  },
+  {
+    "id": "australian-giant-centipede",
+    "name": "Australian Giant Centipede",
+    "epithet": "The Toad Slayer",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Australia & Southeast Asia",
+    "rarity": "uncommon",
+    "image": "images/animals/australian-giant-centipede.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 7,
+      "size": 6
+    },
+    "facts": [
+      "One of the few native predators that can kill and eat the deadly invasive cane toad",
+      "Uses extra-oral digestion — its venom dissolves prey tissues before it even starts eating",
+      "Australia's largest centipede, with bite pain described as extreme and lasting for days"
+    ]
+  },
+  {
+    "id": "waterfall-centipede",
+    "name": "Waterfall Centipede",
+    "epithet": "The Amphibious Nightmare",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "freshwater",
+    "region": "Laos, Thailand & Vietnam",
+    "rarity": "legendary",
+    "image": "images/animals/waterfall-centipede.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 8,
+      "size": 6
+    },
+    "facts": [
+      "The world's first known amphibious centipede — it swims like an eel using horizontal undulations",
+      "Its body is hydrophobic so water rolls right off, leaving it completely dry when it surfaces",
+      "Only 4 specimens have ever been found, making it one of the rarest centipedes on Earth"
+    ]
+  },
+  {
+    "id": "tanzanian-blue-ringleg",
+    "name": "Tanzanian Blue Ringleg",
+    "epithet": "The Global Invader",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "All Inhabited Continents",
+    "rarity": "common",
+    "image": "images/animals/tanzanian-blue-ringleg.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 6,
+      "size": 4
+    },
+    "facts": [
+      "Found on every inhabited continent — one of the most invasive centipede species on Earth",
+      "Stole genetic material from bacteria and fungi to make its venom more potent",
+      "Mothers eat their own eggs when stressed — a gruesome survival strategy called filial cannibalism"
+    ]
+  },
+  {
+    "id": "caribbean-giant-centipede",
+    "name": "Caribbean Giant Centipede",
+    "epithet": "The Island Terror",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Caribbean Islands & Florida Keys",
+    "rarity": "uncommon",
+    "image": "images/animals/caribbean-giant-centipede.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 7,
+      "size": 6
+    },
+    "facts": [
+      "Attacks and eats the deadly cane toad, completely immune to its powerful bufotoxin",
+      "The largest centipede found in the United States east of the Mississippi River",
+      "Uses venomous forcipules to inject venom and dissolve flesh before eating its prey"
+    ]
+  },
+  {
+    "id": "megarian-banded-centipede",
+    "name": "Megarian Banded Centipede",
+    "epithet": "Europe's Nightmare",
+    "type": "centipede",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "Mediterranean Europe & North Africa",
+    "rarity": "common",
+    "image": "images/animals/megarian-banded-centipede.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 6,
+      "size": 5
+    },
+    "facts": [
+      "The largest and most venomous centipede in all of Europe",
+      "Lurks under rocks and in ancient stone walls across popular Mediterranean tourist destinations",
+      "Ancient Greeks and Romans knew this species well and feared its painful bite"
+    ]
+  },
+  {
+    "id": "salmon-shark",
+    "name": "Salmon Shark",
+    "epithet": "The Warm-Blooded Hunter",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "North Pacific Ocean",
+    "rarity": "uncommon",
+    "image": "images/animals/salmon-shark.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 8,
+      "size": 7
+    },
+    "facts": [
+      "Has the highest body temperature of any shark, keeping its core up to 21°C above freezing ocean water",
+      "Hunts in packs of 30-40 sharks, devouring up to 25% of Alaska's entire salmon run",
+      "Often mistaken for a Great White due to its eerily similar appearance"
+    ]
   }
 ]

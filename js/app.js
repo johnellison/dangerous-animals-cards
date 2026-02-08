@@ -1,17 +1,17 @@
 /**
  * App Entry Point
- * Initialize the Dangerous Animals Card Game
+ * Initialize Wild Animal Cards
  */
 (async function() {
   'use strict';
 
   // Show loading state
-  console.log('🦎 Dangerous Animals Card Game - Loading...');
+  console.log('🐾 Wild Animal Cards - Loading...');
 
   try {
     // Load animal data
     const animals = await AnimalData.loadAnimals();
-    console.log(`✅ Loaded ${animals.length} dangerous animals`);
+    console.log(`✅ Loaded ${animals.length} wild animals`);
 
     // Setup audio toggle
     const audioToggle = document.getElementById('audio-toggle');

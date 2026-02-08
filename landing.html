@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#ffd700">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icons/icon-192.svg">
+  <title>Wild Animal Cards - Discover, Guess, Collect</title>
+
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="Wild Animal Cards">
+  <meta property="og:description" content="Discover, guess, and collect 97 amazing animals. A game built by a dad for his kids.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wildanimalcards.com">
+  <meta property="og:image" content="images/icons/icon-512.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wild Animal Cards">
+  <meta name="twitter:description" content="Discover, guess, and collect 97 amazing animals. Free. No sign-up. Works offline.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <!-- Background animal silhouettes -->
+    <div class="hero-bg-silhouettes" aria-hidden="true">
+      <svg class="silhouette silhouette-shark" viewBox="0 0 120 60" fill="currentColor"><path d="M10 40 Q20 10 60 25 Q80 5 110 20 L105 30 Q85 25 70 35 Q50 45 30 42 Z"/><path d="M60 25 L65 10 L58 22" fill="currentColor"/></svg>
+      <svg class="silhouette silhouette-snake" viewBox="0 0 120 60" fill="currentColor"><path d="M10 30 Q25 10 40 25 Q55 40 70 20 Q85 5 100 25 Q108 35 115 30" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="115" cy="28" r="3"/></svg>
+      <svg class="silhouette silhouette-lion" viewBox="0 0 100 80" fill="currentColor"><ellipse cx="50" cy="30" rx="28" ry="26"/><ellipse cx="50" cy="38" rx="18" ry="16"/><path d="M35 55 Q35 75 40 78 L45 78 Q42 65 45 55Z"/><path d="M55 55 Q58 65 55 78 L60 78 Q65 75 65 55Z"/><circle cx="44" cy="34" r="2" fill="#0a0a1a"/><circle cx="56" cy="34" r="2" fill="#0a0a1a"/><ellipse cx="50" cy="40" rx="4" ry="2.5" fill="#0a0a1a"/></svg>
+      <svg class="silhouette silhouette-frog" viewBox="0 0 80 60" fill="currentColor"><ellipse cx="40" cy="35" rx="25" ry="18"/><circle cx="27" cy="18" r="10"/><circle cx="53" cy="18" r="10"/><circle cx="27" cy="16" r="5" fill="#0a0a1a"/><circle cx="53" cy="16" r="5" fill="#0a0a1a"/><path d="M18 48 Q10 55 5 50" stroke="currentColor" stroke-width="3" fill="none"/><path d="M62 48 Q70 55 75 50" stroke="currentColor" stroke-width="3" fill="none"/></svg>
+    </div>
+
+    <!-- Paw print decorations -->
+    <div class="paw-prints" aria-hidden="true">
+      <svg class="paw paw-1" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="26" rx="10" ry="8"/><circle cx="12" cy="14" r="4"/><circle cx="20" cy="10" r="4"/><circle cx="28" cy="14" r="4"/></svg>
+      <svg class="paw paw-2" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="26" rx="10" ry="8"/><circle cx="12" cy="14" r="4"/><circle cx="20" cy="10" r="4"/><circle cx="28" cy="14" r="4"/></svg>
+      <svg class="paw paw-3" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="26" rx="10" ry="8"/><circle cx="12" cy="14" r="4"/><circle cx="20" cy="10" r="4"/><circle cx="28" cy="14" r="4"/></svg>
+      <svg class="paw paw-4" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="26" rx="10" ry="8"/><circle cx="12" cy="14" r="4"/><circle cx="20" cy="10" r="4"/><circle cx="28" cy="14" r="4"/></svg>
+      <svg class="paw paw-5" viewBox="0 0 40 40" fill="currentColor"><ellipse cx="20" cy="26" rx="10" ry="8"/><circle cx="12" cy="14" r="4"/><circle cx="20" cy="10" r="4"/><circle cx="28" cy="14" r="4"/></svg>
+    </div>
+
+    <div class="hero-content">
+      <!-- Claw mark logo -->
+      <div class="hero-logo" aria-label="Wild Animal Cards logo">
+        <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#ffd700" stroke-width="10" stroke-linecap="round">
+            <path d="M30 15 L18 125"><animate attributeName="stroke-dashoffset" from="130" to="0" dur="0.8s" fill="freeze"/></path>
+            <path d="M60 8 L48 132"><animate attributeName="stroke-dashoffset" from="140" to="0" dur="0.8s" begin="0.15s" fill="freeze"/></path>
+            <path d="M90 15 L78 125"><animate attributeName="stroke-dashoffset" from="130" to="0" dur="0.8s" begin="0.3s" fill="freeze"/></path>
+          </g>
+          <circle cx="30" cy="12" r="7" fill="#ffd700"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.6s" fill="freeze"/></circle>
+          <circle cx="60" cy="5" r="7" fill="#ffd700"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.7s" fill="freeze"/></circle>
+          <circle cx="90" cy="12" r="7" fill="#ffd700"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.8s" fill="freeze"/></circle>
+        </svg>
+      </div>
+
+      <h1 class="hero-title">Wild Animal Cards</h1>
+      <p class="hero-tagline">Discover. Guess. Collect. <strong>97 amazing animals</strong> are waiting.</p>
+      <a href="index.html" class="cta-btn cta-primary">Start Playing</a>
+      <p class="hero-subtext">Free. No sign-up. Works offline.</p>
+    </div>
+  </section>
+
+  <!-- ==================== STORY ==================== -->
+  <section class="story section" id="story">
+    <div class="section-inner">
+      <!-- Story icon: two cards with a heart -->
+      <div class="story-icon" aria-hidden="true">
+        <svg viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="10" width="32" height="44" rx="4" stroke="#ffd700" stroke-width="2.5" transform="rotate(-8 21 32)" fill="rgba(255,215,0,0.08)"/>
+          <rect x="43" y="10" width="32" height="44" rx="4" stroke="#ffd700" stroke-width="2.5" transform="rotate(8 59 32)" fill="rgba(255,215,0,0.08)"/>
+          <path d="M40 28 C40 20 30 18 28 24 C26 18 16 20 16 28 C16 38 28 44 28 44 C28 44 40 38 40 28Z" fill="#ff4466" transform="translate(12, -2) scale(0.8)" opacity="0.9"/>
+        </svg>
+      </div>
+      <h2 class="section-title">Why This Exists</h2>
+      <div class="story-text">
+        <p>A dad who loves animals built this game for his kids &mdash; ages 4 and 7 &mdash; so they could play together even when he is far away.</p>
+        <p>Every card is a chance to discover something wild. Every guess is a little victory. And every animal collected is a memory they share, no matter the distance.</p>
+        <p class="story-emphasis">No accounts. No ads. No tracking. Just a game made with love.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THREE WAYS TO PLAY ==================== -->
+  <section class="modes section" id="modes">
+    <div class="section-inner">
+      <h2 class="section-title">Three Ways to Play</h2>
+      <div class="modes-grid">
+
+        <div class="mode-card">
+          <div class="mode-icon" aria-hidden="true">
+            <!-- Card flip icon -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="8" width="40" height="52" rx="6" stroke="#ffd700" stroke-width="3" fill="rgba(255,215,0,0.08)"/>
+              <path d="M24 30 Q32 22 40 30 Q32 38 24 30Z" fill="#ffd700" opacity="0.6"/>
+              <path d="M32 20 L32 44" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.4"/>
+              <path d="M46 28 L52 32 L46 36" stroke="#ffd700" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="mode-name">Discover</h3>
+          <p class="mode-desc">Swipe through beautiful animal cards and tap to flip. Learn fun facts about every creature.</p>
+        </div>
+
+        <div class="mode-card">
+          <div class="mode-icon" aria-hidden="true">
+            <!-- Question mark icon -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="24" stroke="#ffd700" stroke-width="3" fill="rgba(255,215,0,0.08)"/>
+              <text x="32" y="42" text-anchor="middle" fill="#ffd700" font-family="'Russo One', sans-serif" font-size="28" font-weight="bold">?</text>
+              <path d="M12 52 L6 58" stroke="#44ff88" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M52 52 L58 58" stroke="#44ff88" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M8 40 L2 42" stroke="#ffaa00" stroke-width="2" stroke-linecap="round"/>
+              <path d="M56 40 L62 42" stroke="#ffaa00" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="mode-name">Guess</h3>
+          <p class="mode-desc">Photo quiz with streaks and spaced repetition. The game remembers what you know.</p>
+        </div>
+
+        <div class="mode-card">
+          <div class="mode-icon" aria-hidden="true">
+            <!-- Grid collection icon -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="20" height="20" rx="4" stroke="#ffd700" stroke-width="2.5" fill="rgba(255,215,0,0.15)"/>
+              <rect x="36" y="8" width="20" height="20" rx="4" stroke="#ffd700" stroke-width="2.5" fill="rgba(255,215,0,0.08)"/>
+              <rect x="8" y="36" width="20" height="20" rx="4" stroke="#ffd700" stroke-width="2.5" fill="rgba(255,215,0,0.08)"/>
+              <rect x="36" y="36" width="20" height="20" rx="4" stroke="#ffd700" stroke-width="2.5" fill="rgba(255,215,0,0.05)"/>
+              <path d="M14 18 L20 24 L26 14" stroke="#44ff88" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="mode-name">Collect</h3>
+          <p class="mode-desc">Track your progress across 10 categories. Discover every animal from snakes to sharks.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MEET THE ANIMALS ==================== -->
+  <section class="preview section" id="preview">
+    <div class="section-inner">
+      <h2 class="section-title">Meet the Animals</h2>
+      <div class="card-fan">
+        <!-- Card 1: Legendary -->
+        <div class="preview-card preview-card-left">
+          <div class="preview-card-inner legendary">
+            <div class="preview-rarity">legendary</div>
+            <div class="preview-photo">
+              <img src="images/animals/inland-taipan.jpg" alt="Inland Taipan"
+                   onerror="this.parentElement.innerHTML='<div class=\'preview-placeholder\'>&#x1F40D;</div>'">
+            </div>
+            <div class="preview-name">Inland Taipan</div>
+            <div class="preview-epithet">The Fierce Snake</div>
+          </div>
+        </div>
+        <!-- Card 2: Rare (center, elevated) -->
+        <div class="preview-card preview-card-center">
+          <div class="preview-card-inner rare">
+            <div class="preview-rarity">rare</div>
+            <div class="preview-photo">
+              <img src="images/animals/great-white-shark.jpg" alt="Great White Shark"
+                   onerror="this.parentElement.innerHTML='<div class=\'preview-placeholder\'>&#x1F988;</div>'">
+            </div>
+            <div class="preview-name">Great White Shark</div>
+            <div class="preview-epithet">The Ocean's Apex</div>
+          </div>
+        </div>
+        <!-- Card 3: Common -->
+        <div class="preview-card preview-card-right">
+          <div class="preview-card-inner uncommon">
+            <div class="preview-rarity">uncommon</div>
+            <div class="preview-photo">
+              <img src="images/animals/poison-dart-frog.jpg" alt="Poison Dart Frog"
+                   onerror="this.parentElement.innerHTML='<div class=\'preview-placeholder\'>&#x1F438;</div>'">
+            </div>
+            <div class="preview-name">Poison Dart Frog</div>
+            <div class="preview-epithet">The Living Jewel</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collection category icons -->
+      <div class="category-row">
+        <span class="category-icon" title="Snakes">&#x1F40D;</span>
+        <span class="category-icon" title="Frogs & Toads">&#x1F438;</span>
+        <span class="category-icon" title="Big Cats">&#x1F406;</span>
+        <span class="category-icon" title="Spiders & Scorpions">&#x1F577;&#xFE0F;</span>
+        <span class="category-icon" title="Sharks">&#x1F988;</span>
+        <span class="category-icon" title="Birds">&#x1F985;</span>
+        <span class="category-icon" title="Marine Life">&#x1F40B;</span>
+        <span class="category-icon" title="Wolves & Dogs">&#x1F43A;</span>
+        <span class="category-icon" title="Australian Animals">&#x1F998;</span>
+        <span class="category-icon" title="Insects & Bugs">&#x1F41B;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES STRIP ==================== -->
+  <section class="features section" id="features">
+    <div class="features-strip">
+      <div class="feature-item">
+        <svg class="feature-icon" viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="20" rx="3" stroke="#ffd700" stroke-width="2"/><circle cx="16" cy="16" r="5" stroke="#ffd700" stroke-width="2"/></svg>
+        <span>Works on any phone</span>
+      </div>
+      <div class="feature-item">
+        <svg class="feature-icon" viewBox="0 0 32 32" fill="none"><path d="M16 4 L16 18 L24 22" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="16" r="12" stroke="#ffd700" stroke-width="2"/><path d="M8 28 L4 32" stroke="#44ff88" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Works offline</span>
+      </div>
+      <div class="feature-item">
+        <svg class="feature-icon" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="6" stroke="#ffd700" stroke-width="2"/><path d="M6 28 Q6 20 16 20 Q26 20 26 28" stroke="#ffd700" stroke-width="2" fill="none"/><path d="M22 8 L28 8 M25 5 L25 11" stroke="#44ff88" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>No sign-up</span>
+      </div>
+      <div class="feature-item">
+        <svg class="feature-icon" viewBox="0 0 32 32" fill="none"><path d="M6 24 Q6 8 16 8 Q26 8 26 24" stroke="#ffd700" stroke-width="2" fill="none"/><path d="M10 24 Q10 14 16 14 Q22 14 22 24" stroke="#ffd700" stroke-width="2" fill="none"/><circle cx="16" cy="24" r="3" fill="#ffd700"/></svg>
+        <span>Smart learning</span>
+      </div>
+      <div class="feature-item">
+        <svg class="feature-icon" viewBox="0 0 32 32" fill="none"><path d="M16 6 L18 12 L24 12 L19 16 L21 22 L16 18 L11 22 L13 16 L8 12 L14 12Z" fill="#ffd700"/><circle cx="6" cy="8" r="2" fill="#ff4466"/><circle cx="26" cy="6" r="2" fill="#44ff88"/><circle cx="28" cy="24" r="1.5" fill="#ffaa00"/></svg>
+        <span>Celebrations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo" aria-hidden="true">
+        <svg viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#ffd700" stroke-width="5" stroke-linecap="round" opacity="0.6">
+            <path d="M15 8 L10 62"/>
+            <path d="M30 4 L25 66"/>
+            <path d="M45 8 L40 62"/>
+          </g>
+          <circle cx="15" cy="6" r="3.5" fill="#ffd700" opacity="0.6"/>
+          <circle cx="30" cy="2" r="3.5" fill="#ffd700" opacity="0.6"/>
+          <circle cx="45" cy="6" r="3.5" fill="#ffd700" opacity="0.6"/>
+        </svg>
+      </div>
+      <p class="footer-tagline">Made with love for curious kids everywhere.</p>
+      <a href="index.html" class="cta-btn cta-secondary">Play Now</a>
+      <p class="footer-copy">&copy; wildanimalcards.com</p>
+    </div>
+  </footer>
+
+  <script src="js/landing.js"></script>
+</body>
+</html>

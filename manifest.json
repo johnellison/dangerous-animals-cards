@@ -1,8 +1,8 @@
 {
-  "name": "Dangerous Animals Card Game",
-  "short_name": "Dangerous Animals",
-  "description": "Discover, learn, and collect dangerous animals from around the world",
-  "start_url": "/",
+  "name": "Wild Animal Cards",
+  "short_name": "Wild Animals",
+  "description": "Discover, guess, and collect 97 amazing wild animals from around the world",
+  "start_url": "landing.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0a0a1a",

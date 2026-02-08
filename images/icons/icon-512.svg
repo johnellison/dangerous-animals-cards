@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
   <!-- Dark background rounded square -->
   <rect width="512" height="512" rx="80" fill="#0a0a1a"/>
+  <!-- Subtle paw pad behind claw marks -->
+  <ellipse cx="256" cy="320" rx="96" ry="75" fill="#ffd700" opacity="0.12"/>
+  <ellipse cx="166" cy="235" rx="32" ry="27" fill="#ffd700" opacity="0.10"/>
+  <ellipse cx="346" cy="235" rx="32" ry="27" fill="#ffd700" opacity="0.10"/>
+  <ellipse cx="203" cy="192" rx="27" ry="21" fill="#ffd700" opacity="0.08"/>
+  <ellipse cx="309" cy="192" rx="27" ry="21" fill="#ffd700" opacity="0.08"/>
   <!-- Three diagonal gold claw scratch marks -->
   <g stroke="#ffd700" stroke-width="22" stroke-linecap="round" fill="none">
     <path d="M150 106 L106 406"/>

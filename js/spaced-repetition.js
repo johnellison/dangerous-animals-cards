@@ -3,7 +3,8 @@
  * Implements scientifically-proven algorithm for optimal learning retention
  */
 const SpacedRepetition = (function() {
-  const STORAGE_KEY = 'dangerous_animals_sr';
+  const STORAGE_KEY = 'wild_animal_cards_sr';
+  const OLD_STORAGE_KEY = 'dangerous_animals_sr';
 
   // Default values for new cards
   const DEFAULT_EASE_FACTOR = 2.5;
@@ -26,9 +27,25 @@ const SpacedRepetition = (function() {
   };
 
   /**
+   * Migrate data from old localStorage key if needed
+   */
+  function migrate() {
+    try {
+      if (!localStorage.getItem(STORAGE_KEY) && localStorage.getItem(OLD_STORAGE_KEY)) {
+        localStorage.setItem(STORAGE_KEY, localStorage.getItem(OLD_STORAGE_KEY));
+        localStorage.removeItem(OLD_STORAGE_KEY);
+        console.log('Migrated SR data to new key');
+      }
+    } catch (error) {
+      console.error('Error migrating SR data:', error);
+    }
+  }
+
+  /**
    * Load SR data from localStorage
    */
   function load() {
+    migrate();
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
