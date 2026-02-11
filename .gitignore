@@ -7,6 +7,9 @@ node_modules/
 # Environment variables
 .env
 
+# R2 credentials
+.rclone.conf
+
 # Generated audio (large files)
 audio/animals/*.mp3
 audio/voice-sample.wav

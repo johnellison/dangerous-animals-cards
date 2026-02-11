@@ -13,6 +13,11 @@ const AudioManager = (function() {
   // Audio types for animals
   const ANIMAL_AUDIO_TYPES = ['name', 'epithet', 'fact', 'intro'];
 
+  // R2 CDN base URL for audio files in production
+  const AUDIO_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'audio/animals'
+    : 'https://audio.pravos.xyz/dangerous-animals/audio';
+
   // Celebration types
   const CELEBRATION_TYPES = ['confetti', 'laser', 'fireworks', 'whipped-cream'];
 
@@ -86,7 +91,7 @@ const AudioManager = (function() {
    * Get audio path for an animal
    */
   function getAnimalAudioPath(animalId, type) {
-    return `audio/animals/${animalId}-${type}.mp3`;
+    return `${AUDIO_BASE_URL}/${animalId}-${type}.mp3`;
   }
 
   /**
