@@ -2266,5 +2266,47 @@
       "Hunts in packs of 30-40 sharks, devouring up to 25% of Alaska's entire salmon run",
       "Often mistaken for a Great White due to its eerily similar appearance"
     ]
+  },
+  {
+    "id": "fishing-cat",
+    "name": "Fishing Cat",
+    "epithet": "The Wetland Diver",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "South & Southeast Asia",
+    "rarity": "rare",
+    "image": "images/animals/fishing-cat.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 7,
+      "size": 4
+    },
+    "facts": [
+      "The only wild cat that actively dives headfirst underwater to catch fish with its bare paws",
+      "Has semi-webbed front feet that work like built-in flippers for swimming and scooping fish",
+      "Listed as Vulnerable with fewer than 10,000 left in the wild due to rapid wetland destruction"
+    ]
+  },
+  {
+    "id": "alligator-gar",
+    "name": "Alligator Gar",
+    "epithet": "The River Dinosaur",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Southern United States & Mexico",
+    "rarity": "rare",
+    "image": "images/animals/alligator-gar.jpeg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 6,
+      "size": 9
+    },
+    "facts": [
+      "Can grow over 3 meters long and weigh 140 kg — the largest freshwater fish in North America",
+      "Its lineage dates back 100 million years — it literally swam alongside dinosaurs",
+      "Has a primitive swim bladder that works like a lung, letting it breathe air and survive in stagnant water"
+    ]
   }
 ]

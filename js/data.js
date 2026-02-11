@@ -43,7 +43,8 @@ const AnimalData = (function() {
         a.name.toLowerCase().includes('tiger') ||
         a.name.toLowerCase().includes('cheetah') ||
         a.name.toLowerCase().includes('cougar') ||
-        a.name.toLowerCase().includes('ocelot')
+        a.name.toLowerCase().includes('ocelot') ||
+        a.name.toLowerCase().includes('cat')
       )
     },
     spiders: {
