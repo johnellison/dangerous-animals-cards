@@ -225,6 +225,49 @@ button {
   display: block;
 }
 
+/* Deck switch link */
+.deck-switch-link {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-elevated);
+  border: 2px solid var(--card-border);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.deck-switch-link:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Dinosaur deck theming */
+.dino-deck .logo {
+  color: #44ff88;
+  text-shadow: 0 0 10px rgba(68, 255, 136, 0.4),
+               0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dino-deck .nav-btn.active {
+  color: #44ff88;
+  border-color: #44ff88;
+  box-shadow: 0 0 8px rgba(68, 255, 136, 0.3);
+}
+
+.dino-deck .home-link {
+  color: #44ff88;
+}
+
+.dino-deck .home-link:hover {
+  background: #44ff88;
+  color: #000;
+  border-color: #44ff88;
+}
+
 .nav {
   display: flex;
   gap: var(--space-sm);
@@ -641,6 +684,60 @@ button {
 .filter-btn.active {
   background: var(--color-primary);
   color: #000;
+}
+
+/* ================================
+   Collection Search
+   ================================ */
+.collection-search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  max-width: 400px;
+  width: 100%;
+  margin: var(--space-sm) auto 0;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface-elevated);
+  border: 2px solid var(--card-border);
+  border-radius: var(--radius-full);
+  transition: border-color var(--transition-base);
+}
+
+.collection-search:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.search-icon {
+  color: var(--color-text-dim);
+  flex-shrink: 0;
+}
+
+.collection-search:focus-within .search-icon {
+  color: var(--color-primary);
+}
+
+.search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  min-width: 0;
+}
+
+.search-input::placeholder {
+  color: var(--color-text-dim);
+}
+
+.collection-no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+  color: var(--color-text-dim);
+  font-size: var(--text-base);
 }
 
 .collection-grid {

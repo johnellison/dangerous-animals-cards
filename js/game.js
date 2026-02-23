@@ -20,6 +20,7 @@ const Game = (function() {
   // Collection state
   let currentCollection = 'all';
   let currentFilter = 'all';
+  let searchTerm = '';
 
   /**
    * Initialize game with animal data
@@ -65,6 +66,15 @@ const Game = (function() {
         renderCollectionGrid();
       });
     });
+
+    // Collection search
+    const searchInput = document.getElementById('collection-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchTerm = e.target.value.toLowerCase().trim();
+        renderCollectionGrid();
+      });
+    }
 
     // Collection tabs (will be set up when collection mode is entered)
     setupCollectionTabs();
@@ -452,6 +462,10 @@ const Game = (function() {
         tabsContainer.querySelectorAll('.collection-tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         currentCollection = tab.dataset.collection;
+        // Clear search when switching tabs
+        searchTerm = '';
+        const searchInput = document.getElementById('collection-search');
+        if (searchInput) searchInput.value = '';
         renderCollectionGrid();
       });
     });
@@ -489,6 +503,22 @@ const Game = (function() {
       filteredAnimals = collectionAnimals.filter(a => dueIds.includes(a.id));
     } else if (currentFilter === 'mastered') {
       filteredAnimals = collectionAnimals.filter(a => SpacedRepetition.getStatus(a.id) === 'mastered');
+    }
+
+    // Apply search filter
+    if (searchTerm) {
+      filteredAnimals = filteredAnimals.filter(a =>
+        a.name.toLowerCase().includes(searchTerm) ||
+        (a.epithet && a.epithet.toLowerCase().includes(searchTerm)) ||
+        (a.region && a.region.toLowerCase().includes(searchTerm))
+      );
+    }
+
+    if (filteredAnimals.length === 0) {
+      grid.innerHTML = '<div class="collection-no-results">No animals found</div>';
+      updateCollectionProgress(collectionAnimals);
+      updateSRStats();
+      return;
     }
 
     filteredAnimals.forEach(animal => {
