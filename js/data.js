@@ -6,6 +6,46 @@ const AnimalData = (function() {
   let animals = [];
   let loaded = false;
 
+  // Dinosaur collection definitions
+  const DINO_COLLECTIONS = {
+    theropods: {
+      name: 'Theropods',
+      icon: '\uD83E\uDD96',
+      description: 'Two-legged meat-eating dinosaurs',
+      filter: (a) => a.type === 'theropod' && a.category === 'predator'
+    },
+    sauropods: {
+      name: 'Sauropods',
+      icon: '\uD83E\uDD95',
+      description: 'Long-necked gentle giants',
+      filter: (a) => a.type === 'sauropod'
+    },
+    armored: {
+      name: 'Armored Dinos',
+      icon: '\uD83D\uDEE1\uFE0F',
+      description: 'Plated, horned, and armored dinosaurs',
+      filter: (a) => ['ceratopsian', 'stegosaurid', 'ankylosaur'].includes(a.type)
+    },
+    raptors: {
+      name: 'Raptors & Claws',
+      icon: '\uD83E\uDE83',
+      description: 'Fast, smart, deadly hunters',
+      filter: (a) => ['velociraptor', 'deinonychus', 'therizinosaurus'].includes(a.id)
+    },
+    waterDinos: {
+      name: 'Water & Coastal',
+      icon: '\uD83C\uDF0A',
+      description: 'Dinosaurs that lived near water',
+      filter: (a) => a.type === 'spinosaurid' || a.habitat === 'coastal' || a.habitat === 'swamp'
+    },
+    herbivores: {
+      name: 'Plant Eaters',
+      icon: '\uD83C\uDF3F',
+      description: 'Peaceful plant-munching dinosaurs',
+      filter: (a) => a.category === 'herbivore'
+    }
+  };
+
   // Collection definitions with display info
   const COLLECTIONS = {
     snakes: {
@@ -65,6 +105,12 @@ const AnimalData = (function() {
       description: 'Fearsome feathered hunters',
       filter: (a) => a.type === 'bird'
     },
+    riverMonsters: {
+      name: 'River Monsters',
+      icon: '🐟',
+      description: 'Terrifying freshwater fish from rivers around the world',
+      filter: (a) => a.type === 'fish' && a.habitat === 'freshwater'
+    },
     marine: {
       name: 'Marine Life',
       icon: '🐋',
@@ -74,7 +120,7 @@ const AnimalData = (function() {
         a.type === 'cnidarian' ||
         a.type === 'mollusk' ||
         a.type === 'crustacean' ||
-        (a.type === 'fish' && !a.name.toLowerCase().includes('shark'))
+        (a.type === 'fish' && a.habitat !== 'freshwater' && !a.name.toLowerCase().includes('shark'))
       )
     },
     canines: {
@@ -109,10 +155,18 @@ const AnimalData = (function() {
   };
 
   /**
+   * Get the active collections based on current deck
+   */
+  function getActiveCollectionDefs() {
+    return getCurrentDeck() === 'dinosaurs' ? DINO_COLLECTIONS : COLLECTIONS;
+  }
+
+  /**
    * Get collection for an animal
    */
   function getAnimalCollection(animal) {
-    for (const [key, collection] of Object.entries(COLLECTIONS)) {
+    const defs = getActiveCollectionDefs();
+    for (const [key, collection] of Object.entries(defs)) {
       if (collection.filter(animal)) {
         return key;
       }
@@ -124,8 +178,9 @@ const AnimalData = (function() {
    * Get all collections with their animals
    */
   function getCollections() {
+    const defs = getActiveCollectionDefs();
     const result = {};
-    for (const [key, collection] of Object.entries(COLLECTIONS)) {
+    for (const [key, collection] of Object.entries(defs)) {
       const collectionAnimals = animals.filter(collection.filter);
       if (collectionAnimals.length > 0) {
         result[key] = {
@@ -143,9 +198,18 @@ const AnimalData = (function() {
    */
   function getByCollection(collectionKey) {
     if (collectionKey === 'all') return animals;
-    const collection = COLLECTIONS[collectionKey];
+    const defs = getActiveCollectionDefs();
+    const collection = defs[collectionKey];
     if (!collection) return [];
     return animals.filter(collection.filter);
+  }
+
+  /**
+   * Get current deck from URL parameter
+   */
+  function getCurrentDeck() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('deck') || 'animals';
   }
 
   /**
@@ -154,15 +218,18 @@ const AnimalData = (function() {
   async function loadAnimals() {
     if (loaded) return animals;
 
+    const deck = getCurrentDeck();
+    const dataFile = deck === 'dinosaurs' ? 'data/dinosaurs.json' : 'data/animals.json';
+
     try {
-      const response = await fetch('data/animals.json');
-      if (!response.ok) throw new Error('Failed to load animals data');
+      const response = await fetch(dataFile);
+      if (!response.ok) throw new Error(`Failed to load ${deck} data`);
       animals = await response.json();
       loaded = true;
-      console.log(`Loaded ${animals.length} animals`);
+      console.log(`Loaded ${animals.length} ${deck}`);
       return animals;
     } catch (error) {
-      console.error('Error loading animals:', error);
+      console.error(`Error loading ${deck}:`, error);
       // Return demo data if file doesn't exist yet
       animals = getDemoAnimals();
       loaded = true;
@@ -472,7 +539,9 @@ const AnimalData = (function() {
     getCollections,
     getByCollection,
     getAnimalCollection,
-    COLLECTIONS
+    getCurrentDeck,
+    COLLECTIONS,
+    DINO_COLLECTIONS
   };
 })();
 
@@ -481,7 +550,8 @@ const AnimalData = (function() {
  * Handles saving and loading player progress
  */
 const Collection = (function() {
-  const STORAGE_KEY = 'wild_animal_cards_collection';
+  const deck = AnimalData.getCurrentDeck();
+  const STORAGE_KEY = deck === 'dinosaurs' ? 'dinosaur_cards_collection' : 'wild_animal_cards_collection';
   const OLD_STORAGE_KEY = 'dangerous_animals_collection';
 
   let discovered = new Set();

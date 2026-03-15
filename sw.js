@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wild-animal-cards-v1';
+const CACHE_NAME = 'wild-animal-cards-v4';
 
 const CORE_ASSETS = [
   'landing.html',
@@ -14,7 +14,8 @@ const CORE_ASSETS = [
   'js/game.js',
   'js/app.js',
   'js/landing.js',
-  'data/animals.json'
+  'data/animals.json',
+  'data/dinosaurs.json'
 ];
 
 // Install: pre-cache core assets
@@ -32,6 +33,19 @@ self.addEventListener('fetch', (event) => {
 
   // Only handle same-origin requests
   if (url.origin !== location.origin) return;
+
+  // For requests with query parameters (e.g. ?deck=dinosaurs),
+  // use network-first so the query string is preserved
+  if (url.search) {
+    event.respondWith(
+      fetch(event.request).catch(() => {
+        // Strip query params for cache fallback to find index.html
+        const cleanUrl = url.origin + url.pathname;
+        return caches.match(cleanUrl);
+      })
+    );
+    return;
+  }
 
   const isImage = event.request.destination === 'image' ||
     /\.(png|jpg|jpeg|gif|svg|webp)$/i.test(url.pathname);

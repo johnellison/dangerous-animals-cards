@@ -1,0 +1,443 @@
+[
+  {
+    "id": "tyrannosaurus-rex",
+    "name": "Tyrannosaurus Rex",
+    "epithet": "The King of Dinosaurs",
+    "type": "theropod",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "North America",
+    "rarity": "legendary",
+    "image": "images/dinosaurs/tyrannosaurus-rex.png",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 6,
+      "size": 9
+    },
+    "facts": [
+      "Had 60 teeth that were 8 inches long and the strongest bite of any land animal ever",
+      "Could grow up to 40 feet long and weigh over 15,000 pounds",
+      "The most complete T-Rex fossil 'Sue' has a skull that weighs 600 pounds alone"
+    ]
+  },
+  {
+    "id": "triceratops",
+    "name": "Triceratops",
+    "epithet": "The Three-Horned Tank",
+    "type": "ceratopsian",
+    "category": "herbivore",
+    "habitat": "land",
+    "region": "North America",
+    "rarity": "common",
+    "image": "images/dinosaurs/triceratops.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 4,
+      "size": 8
+    },
+    "facts": [
+      "Its name means 'three-horned face' with two giant brow horns and one on its nose",
+      "Grew nearly 30 feet long and weighed up to 5 tons",
+      "Could eat tough plants that other dinosaurs couldn't with its beak-like jaw and slicing teeth"
+    ]
+  },
+  {
+    "id": "velociraptor",
+    "name": "Velociraptor",
+    "epithet": "The Lightning Hunter",
+    "type": "theropod",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Mongolia (Gobi Desert)",
+    "rarity": "uncommon",
+    "image": "images/dinosaurs/velociraptor.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 9,
+      "size": 3
+    },
+    "facts": [
+      "Was actually the size of a turkey, not the giant monster from movies",
+      "Could run up to 24 miles per hour on its muscular legs",
+      "Had feathers covering its body like a deadly bird"
+    ]
+  },
+  {
+    "id": "stegosaurus",
+    "name": "Stegosaurus",
+    "epithet": "The Plated Warrior",
+    "type": "stegosaurid",
+    "category": "herbivore",
+    "habitat": "forest",
+    "region": "North America",
+    "rarity": "uncommon",
+    "image": "images/dinosaurs/stegosaurus.png",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 3,
+      "size": 7
+    },
+    "facts": [
+      "Had 17 kite-shaped plates along its back and dangerous spikes on its tail",
+      "Is the official state fossil of Colorado since 1982",
+      "Lived 155 million years ago and probably traveled in herds through wooded areas"
+    ]
+  },
+  {
+    "id": "brachiosaurus",
+    "name": "Brachiosaurus",
+    "epithet": "The Gentle Giant",
+    "type": "sauropod",
+    "category": "herbivore",
+    "habitat": "forest",
+    "region": "North America & Africa",
+    "rarity": "rare",
+    "image": "images/dinosaurs/brachiosaurus.jpg",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 2,
+      "size": 10
+    },
+    "facts": [
+      "Could reach vegetation 30 feet off the ground like a giant giraffe",
+      "Grew over 80 feet long and weighed more than 28 tons",
+      "Its front legs were longer than its back legs, making it stand tall and upright"
+    ]
+  },
+  {
+    "id": "spinosaurus",
+    "name": "Spinosaurus",
+    "epithet": "The River Monster",
+    "type": "spinosaurid",
+    "category": "predator",
+    "habitat": "coastal",
+    "region": "North Africa",
+    "rarity": "legendary",
+    "image": "images/dinosaurs/spinosaurus.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 5,
+      "size": 10
+    },
+    "facts": [
+      "Was longer and heavier than T-Rex, possibly the largest carnivorous dinosaur ever",
+      "Had a giant sail on its back with spines the size of surfboards",
+      "Could swim and hunt fish like a crocodile with its long snout and straight teeth"
+    ]
+  },
+  {
+    "id": "ankylosaurus",
+    "name": "Ankylosaurus",
+    "epithet": "The Living Tank",
+    "type": "ankylosaur",
+    "category": "herbivore",
+    "habitat": "land",
+    "region": "North America",
+    "rarity": "rare",
+    "image": "images/dinosaurs/ankylosaurus.png",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 2,
+      "size": 7
+    },
+    "facts": [
+      "Was covered head to tail in armor plates and had a massive bone club on its tail",
+      "Its name means 'fused lizard' because its skull bones were fused together like a helmet",
+      "Could swing its tail club hard enough to break the bones of attacking predators"
+    ]
+  },
+  {
+    "id": "allosaurus",
+    "name": "Allosaurus",
+    "epithet": "The Jurassic Apex Hunter",
+    "type": "theropod",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Western United States",
+    "rarity": "uncommon",
+    "image": "images/dinosaurs/allosaurus.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 7,
+      "size": 8
+    },
+    "facts": [
+      "Had 70 razor-sharp teeth and 8-inch-long claws for grabbing prey",
+      "Could run up to 21 miles per hour on two powerful legs",
+      "Was the most common large predator in its time, hunting stegosaurs and giant sauropods"
+    ]
+  },
+  {
+    "id": "diplodocus",
+    "name": "Diplodocus",
+    "epithet": "The Whip-Tailed Giant",
+    "type": "sauropod",
+    "category": "herbivore",
+    "habitat": "land",
+    "region": "Western United States",
+    "rarity": "uncommon",
+    "image": "images/dinosaurs/diplodocus.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 3,
+      "size": 10
+    },
+    "facts": [
+      "Could grow up to 108 feet long - longer than 3 school buses",
+      "Its tail could crack like a whip at supersonic speed to scare off predators",
+      "Used its peg-like teeth pointing forward to strip leaves from plants like a living rake"
+    ]
+  },
+  {
+    "id": "apatosaurus",
+    "name": "Apatosaurus",
+    "epithet": "The Thunder Lizard",
+    "type": "sauropod",
+    "category": "herbivore",
+    "habitat": "land",
+    "region": "Western United States",
+    "rarity": "common",
+    "image": "images/dinosaurs/apatosaurus.jpg",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 2,
+      "size": 9
+    },
+    "facts": [
+      "Laid eggs that were a whole foot long - bigger than a soccer ball",
+      "Had a brain the size of a baseball despite weighing 26 tons",
+      "Protected its babies from predators by hiding them in the center of the herd"
+    ]
+  },
+  {
+    "id": "dilophosaurus",
+    "name": "Dilophosaurus",
+    "epithet": "The Double-Crested Dragon",
+    "type": "theropod",
+    "category": "predator",
+    "habitat": "coastal",
+    "region": "Arizona, United States",
+    "rarity": "rare",
+    "image": "images/dinosaurs/dilophosaurus.png",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 6,
+      "size": 6
+    },
+    "facts": [
+      "Had two thin bony crests on its head that may have been used to attract mates",
+      "Could sprint at speeds up to 20 miles per hour chasing prey",
+      "Lived near rivers and streams in a wet, rainy environment 186 million years ago"
+    ]
+  },
+  {
+    "id": "pachycephalosaurus",
+    "name": "Pachycephalosaurus",
+    "epithet": "The Bone-Headed Battler",
+    "type": "pachycephalosaur",
+    "category": "herbivore",
+    "habitat": "forest",
+    "region": "North America",
+    "rarity": "rare",
+    "image": "images/dinosaurs/pachycephalosaurus.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 6,
+      "size": 5
+    },
+    "facts": [
+      "Had a skull dome 10 inches thick - strong enough to headbutt rivals like a battering ram",
+      "Used its thick skull for head-butting contests, similar to bighorn sheep today",
+      "Lived in the last days of the dinosaurs and was one of the final species before the asteroid hit"
+    ]
+  },
+  {
+    "id": "parasaurolophus",
+    "name": "Parasaurolophus",
+    "epithet": "The Trumpeting Hadrosaur",
+    "type": "ornithopod",
+    "category": "herbivore",
+    "habitat": "swamp",
+    "region": "North America",
+    "rarity": "uncommon",
+    "image": "images/dinosaurs/parasaurolophus.png",
+    "stats": {
+      "dangerLevel": 2,
+      "speed": 5,
+      "size": 8
+    },
+    "facts": [
+      "Could produce loud, trumpet-like calls through its hollow 6-foot-long head crest",
+      "Grew over 30 feet long and weighed more than an elephant",
+      "Could walk on two legs or all fours and had a shovel-shaped beak for snipping tough plants"
+    ]
+  },
+  {
+    "id": "carnotaurus",
+    "name": "Carnotaurus",
+    "epithet": "The Horned Speedster",
+    "type": "theropod",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Argentina, South America",
+    "rarity": "legendary",
+    "image": "images/dinosaurs/carnotaurus.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 9,
+      "size": 7
+    },
+    "facts": [
+      "The only meat-eating dinosaur with bull-like horns above its eyes for head-butting rivals",
+      "One of the fastest large predators ever, running up to 35 miles per hour",
+      "Had tiny arms even smaller than T-Rex, making it look like it had no arms at all"
+    ]
+  },
+  {
+    "id": "giganotosaurus",
+    "name": "Giganotosaurus",
+    "epithet": "The Giant Hunter",
+    "type": "theropod",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Argentina (Patagonia)",
+    "rarity": "legendary",
+    "image": "images/dinosaurs/giganotosaurus.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 7,
+      "size": 10
+    },
+    "facts": [
+      "Bigger than T-Rex but had a brain the size of a banana!",
+      "Could run up to 31 mph despite being 43 feet long",
+      "Hunted giant titanosaurs - some of the biggest animals ever!"
+    ]
+  },
+  {
+    "id": "therizinosaurus",
+    "name": "Therizinosaurus",
+    "epithet": "The Claw Master",
+    "type": "theropod",
+    "category": "herbivore",
+    "habitat": "forest",
+    "region": "Mongolia (Gobi Desert)",
+    "rarity": "rare",
+    "image": "images/dinosaurs/therizinosaurus.png",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 4,
+      "size": 8
+    },
+    "facts": [
+      "Had the longest claws of any animal ever - up to 3 feet long!",
+      "A vegetarian theropod - ate leaves instead of meat despite being related to T-Rex",
+      "Used its giant claws like hooks to pull tree branches closer to eat"
+    ]
+  },
+  {
+    "id": "deinonychus",
+    "name": "Deinonychus",
+    "epithet": "The Terrible Claw",
+    "type": "theropod",
+    "category": "predator",
+    "habitat": "land",
+    "region": "United States (Montana, Wyoming, Utah)",
+    "rarity": "uncommon",
+    "image": "images/dinosaurs/deinonychus.png",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 8,
+      "size": 3
+    },
+    "facts": [
+      "The real-life 'Velociraptor' from Jurassic Park movies!",
+      "Had a huge sickle claw on each foot for slashing prey",
+      "Smart and fast - could run up to 25 mph and hunt in packs"
+    ]
+  },
+  {
+    "id": "iguanodon",
+    "name": "Iguanodon",
+    "epithet": "The Thumb Spike",
+    "type": "ornithopod",
+    "category": "herbivore",
+    "habitat": "swamp",
+    "region": "Europe (Belgium, England, Germany)",
+    "rarity": "common",
+    "image": "images/dinosaurs/iguanodon.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 5,
+      "size": 7
+    },
+    "facts": [
+      "Had a huge spike on each thumb - possibly for defense against predators",
+      "One of the first dinosaurs ever discovered back in 1822!",
+      "Scientists first thought its thumb spike was a horn on its nose!"
+    ]
+  },
+  {
+    "id": "baryonyx",
+    "name": "Baryonyx",
+    "epithet": "The River Hunter",
+    "type": "spinosaurid",
+    "category": "predator",
+    "habitat": "coastal",
+    "region": "England (Surrey)",
+    "rarity": "uncommon",
+    "image": "images/dinosaurs/baryonyx.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 6,
+      "size": 7
+    },
+    "facts": [
+      "Ate fish like a giant crocodile - fossils found with fish scales in its stomach!",
+      "Had a massive 12-inch claw on each hand for catching slippery fish",
+      "Also snacked on baby Iguanodons when it got the chance"
+    ]
+  },
+  {
+    "id": "ceratosaurus",
+    "name": "Ceratosaurus",
+    "epithet": "The Horned Sprinter",
+    "type": "theropod",
+    "category": "predator",
+    "habitat": "land",
+    "region": "United States (Colorado, Utah)",
+    "rarity": "uncommon",
+    "image": "images/dinosaurs/ceratosaurus.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 8,
+      "size": 6
+    },
+    "facts": [
+      "Had a horn on its nose and two more above its eyes!",
+      "Had four fingers instead of three like most other theropods",
+      "The sprinter of the dinosaur world - could burst into high speed to catch prey"
+    ]
+  },
+  {
+    "id": "albertosaurus",
+    "name": "Albertosaurus",
+    "epithet": "The Pack Leader",
+    "type": "tyrannosaur",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Canada (Alberta)",
+    "rarity": "rare",
+    "image": "images/dinosaurs/albertosaurus.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 7,
+      "size": 8
+    },
+    "facts": [
+      "Hunted in packs of 12 or more - teamwork made them super deadly!",
+      "T-Rex's smaller cousin from Canada",
+      "The most common big predator in Late Cretaceous Canada - the king of Alberta!"
+    ]
+  }
+]

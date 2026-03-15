@@ -93,13 +93,22 @@
   overflow: hidden;
   margin: 8px;
   border-radius: var(--radius-lg);
-  background: #000;
+  background: linear-gradient(145deg, #0d0d20 0%, #1a1a3a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dinosaur deck: light bg for paleoart illustrations */
+.dino-deck .card-image-wrapper {
+  background: linear-gradient(145deg, #f0ede6 0%, #e8e4db 100%);
 }
 
 .card-photo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   transition: transform var(--transition-slow);
 }
 
@@ -372,12 +381,25 @@
 .card-type-icon[data-type="cnidarian"]::after { content: "🪼"; }
 .card-type-icon[data-type="bird"]::after { content: "🦅"; }
 
+/* Dinosaur Type Icons */
+.card-type-icon[data-type="theropod"]::after { content: "🦖"; }
+.card-type-icon[data-type="sauropod"]::after { content: "🦕"; }
+.card-type-icon[data-type="ceratopsian"]::after { content: "🛡️"; }
+.card-type-icon[data-type="stegosaurid"]::after { content: "⚔️"; }
+.card-type-icon[data-type="ankylosaur"]::after { content: "🪨"; }
+.card-type-icon[data-type="ornithopod"]::after { content: "🦆"; }
+.card-type-icon[data-type="pachycephalosaur"]::after { content: "💥"; }
+.card-type-icon[data-type="spinosaurid"]::after { content: "🐊"; }
+.card-type-icon[data-type="tyrannosaur"]::after { content: "👑"; }
+
 /* Habitat Icons */
 .card-habitat[data-habitat="land"]::before { content: "🏜️"; }
 .card-habitat[data-habitat="sea"]::before { content: "🌊"; }
 .card-habitat[data-habitat="freshwater"]::before { content: "🏞️"; }
 .card-habitat[data-habitat="forest"]::before { content: "🌲"; }
 .card-habitat[data-habitat="desert"]::before { content: "🏜️"; }
+.card-habitat[data-habitat="coastal"]::before { content: "🏖️"; }
+.card-habitat[data-habitat="swamp"]::before { content: "🌿"; }
 
 /* ================================
    Silhouette Mode (Guess Game)

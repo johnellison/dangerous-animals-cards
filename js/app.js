@@ -9,9 +9,19 @@
   console.log('🐾 Wild Animal Cards - Loading...');
 
   try {
+    // Detect deck and update UI
+    const deck = AnimalData.getCurrentDeck();
+    const isDino = deck === 'dinosaurs';
+    if (isDino) {
+      document.title = 'Dinosaur Cards';
+      const logo = document.querySelector('.logo');
+      if (logo) logo.textContent = 'Dinosaur Cards';
+      document.body.classList.add('dino-deck');
+    }
+
     // Load animal data
     const animals = await AnimalData.loadAnimals();
-    console.log(`✅ Loaded ${animals.length} wild animals`);
+    console.log(`✅ Loaded ${animals.length} ${isDino ? 'dinosaurs' : 'wild animals'}`);
 
     // Setup audio toggle
     const audioToggle = document.getElementById('audio-toggle');
@@ -22,6 +32,18 @@
       const nowMuted = AudioManager.toggleMute();
       audioToggle.classList.toggle('muted', nowMuted);
     });
+
+    // Setup deck switch link
+    const deckSwitch = document.getElementById('deck-switch');
+    if (deckSwitch) {
+      if (isDino) {
+        deckSwitch.href = 'index.html';
+        deckSwitch.textContent = '\uD83D\uDC3E Animals';
+      } else {
+        deckSwitch.href = 'index.html?deck=dinosaurs';
+        deckSwitch.textContent = '\uD83E\uDD96 Dinosaurs';
+      }
+    }
 
     // Initialize game
     Game.init(animals);

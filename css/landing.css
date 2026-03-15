@@ -683,6 +683,99 @@ a {
   }
 }
 
+/* ================================
+   CHOOSE YOUR DECK
+   ================================ */
+.decks {
+  background: var(--color-bg-gradient);
+}
+
+.decks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.deck-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--color-surface);
+  border: 2px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  padding: 40px 28px 32px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.deck-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.deck-animals:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+              0 0 20px var(--color-primary-glow);
+}
+
+.deck-dinosaurs:hover {
+  border-color: #44ff88;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+              0 0 20px rgba(68, 255, 136, 0.3);
+}
+
+.deck-icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.deck-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.deck-dinosaurs .deck-name {
+  color: #44ff88;
+}
+
+.deck-desc {
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.deck-cta {
+  display: inline-block;
+  padding: 10px 32px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.deck-animals .deck-cta {
+  background: var(--card-gold);
+  color: #000;
+}
+
+.deck-dinosaurs .deck-cta {
+  background: linear-gradient(135deg, #44ff88 0%, #22cc66 50%, #44ff88 100%);
+  color: #000;
+}
+
 /* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .section {
@@ -699,5 +792,12 @@ a {
 
   .card-fan {
     min-height: 380px;
+  }
+}
+
+/* Tablet (768px+) - decks grid */
+@media (min-width: 768px) {
+  .decks-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

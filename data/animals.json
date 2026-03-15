@@ -2308,5 +2308,257 @@
       "Its lineage dates back 100 million years — it literally swam alongside dinosaurs",
       "Has a primitive swim bladder that works like a lung, letting it breathe air and survive in stagnant water"
     ]
+  },
+  {
+    "id": "piranha",
+    "name": "Piranha",
+    "epithet": "The Razor Swarm",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Amazon Basin, South America",
+    "rarity": "common",
+    "image": "images/animals/piranha.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 5,
+      "size": 3
+    },
+    "facts": [
+      "A group of piranhas can strip a large fish to bones in under a minute during a feeding frenzy",
+      "Despite their scary reputation, piranhas are actually shy and mostly eat smaller fish, insects, and even plants",
+      "Their razor-sharp interlocking teeth work like scissors and are so strong they were used as cutting tools by indigenous people"
+    ]
+  },
+  {
+    "id": "goliath-tigerfish",
+    "name": "Goliath Tigerfish",
+    "epithet": "The River Demon",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Congo River Basin, Central Africa",
+    "rarity": "rare",
+    "image": "images/animals/goliath-tigerfish.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 8,
+      "size": 7
+    },
+    "facts": [
+      "Has 32 razor-sharp teeth the size of a great white shark's — one of the most fearsome freshwater predators alive",
+      "Can leap out of the water to catch birds in mid-flight like a living missile",
+      "Lives in the Congo River's extreme rapids where few other predators dare to hunt"
+    ]
+  },
+  {
+    "id": "payara",
+    "name": "Payara",
+    "epithet": "The Vampire Fish",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Amazon & Orinoco Basins, South America",
+    "rarity": "rare",
+    "image": "images/animals/payara.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 8,
+      "size": 6
+    },
+    "facts": [
+      "Has two enormous fangs up to 15 cm long — so long that its upper jaw has special holes for them to fit into",
+      "Eats piranhas for breakfast, making it one of the few fish that hunts the feared piranha",
+      "Hunts in fast-moving rapids and strikes prey from below with explosive speed"
+    ]
+  },
+  {
+    "id": "candiru",
+    "name": "Candiru",
+    "epithet": "The Tiny Terror",
+    "type": "fish",
+    "category": "parasite",
+    "habitat": "freshwater",
+    "region": "Amazon River Basin, South America",
+    "rarity": "rare",
+    "image": "images/animals/candiru.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 6,
+      "size": 1
+    },
+    "facts": [
+      "This tiny parasitic fish is nearly invisible in the water and sneaks into the gills of bigger fish to drink their blood",
+      "Has backward-pointing spines that lock it in place once inside a host — like a living fish hook",
+      "Only 2-5 cm long but considered the most feared tiny fish in the entire Amazon River"
+    ]
+  },
+  {
+    "id": "wels-catfish",
+    "name": "Wels Catfish",
+    "epithet": "The River Giant",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Rivers & Lakes of Europe",
+    "rarity": "uncommon",
+    "image": "images/animals/wels-catfish.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 5,
+      "size": 10
+    },
+    "facts": [
+      "The largest freshwater fish in Europe — can grow over 2.7 meters long and weigh 130 kg",
+      "Has learned to beach itself on riverbanks to grab pigeons, earning it the nickname 'freshwater killer whale'",
+      "Can live for over 80 years and uses sensitive whiskers to hunt in complete darkness"
+    ]
+  },
+  {
+    "id": "arapaima",
+    "name": "Arapaima",
+    "epithet": "The Amazon Tank",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Amazon Basin, South America",
+    "rarity": "rare",
+    "image": "images/animals/arapaima.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 6,
+      "size": 10
+    },
+    "facts": [
+      "Has armor-plated scales so tough that piranhas cannot bite through them — nature's bulletproof vest",
+      "One of the largest freshwater fish on Earth at up to 3 meters long and 200 kg",
+      "Must breathe air like a mammal, surfacing every 10-20 minutes with a loud gulping sound"
+    ]
+  },
+  {
+    "id": "giant-freshwater-stingray",
+    "name": "Giant Freshwater Stingray",
+    "epithet": "The River Phantom",
+    "type": "fish",
+    "category": "venomous",
+    "habitat": "freshwater",
+    "region": "Southeast Asia",
+    "rarity": "legendary",
+    "image": "images/animals/giant-freshwater-stingray.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 3,
+      "size": 10
+    },
+    "facts": [
+      "Might be the heaviest freshwater fish in the world — one caught in Cambodia in 2022 weighed 300 kg",
+      "Hides buried under sand on the riverbed, making it almost completely invisible to anyone wading nearby",
+      "Its venomous tail barb can be 38 cm long and delivers an excruciatingly painful sting"
+    ]
+  },
+  {
+    "id": "giant-snakehead",
+    "name": "Giant Snakehead",
+    "epithet": "The River Striker",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Southeast Asia",
+    "rarity": "uncommon",
+    "image": "images/animals/giant-snakehead.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 7,
+      "size": 6
+    },
+    "facts": [
+      "Can breathe air and survive out of water for days — it can even slither across land to reach new ponds",
+      "Nicknamed 'fishzilla' because it takes over every ecosystem it invades and eats everything",
+      "Extremely aggressive when guarding its young and will attack anything that comes close, including humans"
+    ]
+  },
+  {
+    "id": "goonch-catfish",
+    "name": "Goonch Catfish",
+    "epithet": "The River Lurker",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "South & Southeast Asia",
+    "rarity": "rare",
+    "image": "images/animals/goonch-catfish.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 5,
+      "size": 8
+    },
+    "facts": [
+      "Suspected of pulling people underwater in India's Kali River — investigated by famous angler Jeremy Wade",
+      "Has sharp backward-pointing teeth designed for gripping prey so nothing can escape its jaws",
+      "Some scientists think these catfish grew extra large by feeding near riverside funeral pyres"
+    ]
+  },
+  {
+    "id": "nile-perch",
+    "name": "Nile Perch",
+    "epithet": "The Lake Destroyer",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Nile River & Lake Victoria, Africa",
+    "rarity": "uncommon",
+    "image": "images/animals/nile-perch.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 6,
+      "size": 9
+    },
+    "facts": [
+      "When introduced to Lake Victoria, it gobbled up over 200 native fish species — causing the biggest freshwater mass extinction ever",
+      "Can grow up to 2 meters long and 200 kg, making it one of the biggest freshwater fish in the world",
+      "Such a greedy eater that it will even cannibalize its own species when other food runs out"
+    ]
+  },
+  {
+    "id": "red-bellied-pacu",
+    "name": "Red-bellied Pacu",
+    "epithet": "The Nutcracker Fish",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "freshwater",
+    "region": "Amazon & Orinoco Basins, South America",
+    "rarity": "common",
+    "image": "images/animals/red-bellied-pacu.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 5,
+      "size": 5
+    },
+    "facts": [
+      "A close cousin of the piranha but with flat, square teeth that look disturbingly human",
+      "Its bite is strong enough to crack open Brazil nuts — one of the hardest nuts in the world",
+      "Has become an invasive species found on every continent except Antarctica after being released from aquariums"
+    ]
+  },
+  {
+    "id": "bluefin-tuna",
+    "name": "Bluefin Tuna",
+    "epithet": "The Ocean Torpedo",
+    "type": "fish",
+    "category": "predator",
+    "habitat": "sea",
+    "region": "Atlantic & Pacific Oceans",
+    "rarity": "rare",
+    "image": "images/animals/bluefin-tuna.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 9,
+      "size": 9
+    },
+    "facts": [
+      "Can reach speeds of 70 km/h and cross the Atlantic Ocean in under 60 days",
+      "Grows up to 3 metres long and can weigh over 900 kg — heavier than a horse",
+      "Critically endangered from overfishing, a single bluefin sold for $3.1 million at auction in Japan"
+    ]
   }
 ]
