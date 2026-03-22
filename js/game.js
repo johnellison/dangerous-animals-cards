@@ -638,9 +638,37 @@ const Game = (function() {
     modal.querySelector('.modal-backdrop').addEventListener('click', closeModal);
   }
 
+  /**
+   * Handle URL-based deep linking to a specific animal
+   * Supports ?animal=bullet-ant to open that animal's card directly
+   */
+  function handleDeepLink() {
+    const params = new URLSearchParams(window.location.search);
+    const animalId = params.get('animal');
+    if (!animalId) return;
+
+    const allAnimals = AnimalData.getAll();
+    const animal = allAnimals.find(a => a.id === animalId);
+    if (!animal) return;
+
+    // Mark as discovered so it shows in collection
+    Collection.discover(animal.id);
+
+    // Find in shuffled array and navigate there in discover mode
+    const idx = animals.findIndex(a => a.id === animalId);
+    if (idx !== -1) {
+      currentAnimalIndex = idx;
+      loadCurrentCard();
+    }
+
+    // Open the modal so the card is front and center
+    setTimeout(() => openCardModal(animal), 400);
+  }
+
   return {
     init,
     switchMode,
-    loadCurrentCard
+    loadCurrentCard,
+    handleDeepLink
   };
 })();

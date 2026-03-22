@@ -51,6 +51,9 @@
     // Load first card
     Game.loadCurrentCard();
 
+    // Handle deep links like ?animal=bullet-ant
+    Game.handleDeepLink();
+
     console.log('🎮 Game ready! Tap a card to flip it.');
 
   } catch (error) {
