@@ -2602,5 +2602,68 @@
       "Has special fangs with forward-facing holes designed like tiny water guns to spray venom",
       "Unlike most cobras, it prefers to spit rather than bite — but its bite can still be fatal to humans"
     ]
+  },
+  {
+    "id": "american-black-bear",
+    "name": "American Black Bear",
+    "epithet": "The Forest Giant",
+    "type": "mammal",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "North America",
+    "rarity": "uncommon",
+    "image": "images/animals/american-black-bear.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 7,
+      "size": 8
+    },
+    "facts": [
+      "Can run up to 56 km/h — that's faster than a horse and way faster than any human!",
+      "Has an incredible sense of smell 7 times better than a bloodhound and can sniff food from over 30 km away",
+      "Despite their name, black bears can be brown, cinnamon, blonde, or even white — the 'spirit bear' is an all-white black bear!"
+    ]
+  },
+  {
+    "id": "hawk",
+    "name": "Hawk",
+    "epithet": "The Sky Hunter",
+    "type": "bird",
+    "category": "predator",
+    "habitat": "land",
+    "region": "Worldwide",
+    "rarity": "common",
+    "image": "images/animals/hawk.jpg",
+    "stats": {
+      "dangerLevel": 5,
+      "speed": 9,
+      "size": 4
+    },
+    "facts": [
+      "Has eyesight 8 times sharper than humans — can spot a mouse from over 1.5 km away!",
+      "Can dive at speeds over 240 km/h to catch prey, striking with the force of a bullet",
+      "Hawks mate for life and build massive nests called 'eyries' that they return to year after year"
+    ]
+  },
+  {
+    "id": "bald-eagle",
+    "name": "Bald Eagle",
+    "epithet": "The Freedom Flyer",
+    "type": "bird",
+    "category": "predator",
+    "habitat": "coastal",
+    "region": "North America",
+    "rarity": "rare",
+    "image": "images/animals/bald-eagle.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 8,
+      "size": 7
+    },
+    "facts": [
+      "Has a wingspan of up to 2.3 metres — wider than most adults are tall!",
+      "Can lift fish weighing up to 1.8 kg out of the water with its powerful talons while flying at full speed",
+      "Nearly went extinct in the 1960s with only 417 pairs left, but conservation brought them back to over 300,000 — one of nature's greatest comeback stories!"
+    ]
   }
 ]
