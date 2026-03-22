@@ -2560,5 +2560,47 @@
       "Grows up to 3 metres long and can weigh over 900 kg — heavier than a horse",
       "Critically endangered from overfishing, a single bluefin sold for $3.1 million at auction in Japan"
     ]
+  },
+  {
+    "id": "bullet-ant",
+    "name": "Bullet Ant",
+    "epithet": "The Thunder Sting",
+    "type": "insect",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Central & South America",
+    "rarity": "rare",
+    "image": "images/animals/bullet-ant.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 4,
+      "size": 2
+    },
+    "facts": [
+      "Has the most painful sting of any insect on Earth — rated 4+ on the Schmidt Pain Index, it feels like being shot by a bullet!",
+      "Can grow up to 3 cm long, making it one of the largest ants in the world — as big as your thumb!",
+      "Some tribes in Brazil use bullet ant stings as a warrior initiation — boys must wear gloves full of bullet ants for 10 minutes without crying"
+    ]
+  },
+  {
+    "id": "spitting-cobra",
+    "name": "Spitting Cobra",
+    "epithet": "The Venom Sniper",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "forest",
+    "region": "Africa & Southeast Asia",
+    "rarity": "rare",
+    "image": "images/animals/spitting-cobra.jpg",
+    "stats": {
+      "dangerLevel": 8,
+      "speed": 7,
+      "size": 5
+    },
+    "facts": [
+      "Can spit venom up to 3 metres with deadly accuracy — aiming straight for the eyes to blind its enemies!",
+      "Has special fangs with forward-facing holes designed like tiny water guns to spray venom",
+      "Unlike most cobras, it prefers to spit rather than bite — but its bite can still be fatal to humans"
+    ]
   }
 ]
