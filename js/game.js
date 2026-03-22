@@ -654,15 +654,23 @@ const Game = (function() {
     // Mark as discovered so it shows in collection
     Collection.discover(animal.id);
 
-    // Find in shuffled array and navigate there in discover mode
-    const idx = animals.findIndex(a => a.id === animalId);
-    if (idx !== -1) {
-      currentAnimalIndex = idx;
-      loadCurrentCard();
+    // Find in shuffled array and move to that position
+    let idx = animals.findIndex(a => a.id === animalId);
+    if (idx === -1) {
+      // Animal not in shuffled array — add it at the front
+      animals.unshift(animal);
+      idx = 0;
     }
+    currentAnimalIndex = idx;
 
-    // Open the modal so the card is front and center
-    setTimeout(() => openCardModal(animal), 400);
+    // Show the card and auto-flip to reveal it
+    const card = document.getElementById('main-card');
+    CardRenderer.renderCard(animal, card);
+    updateCardCounter();
+    setTimeout(() => {
+      CardRenderer.flipCard(card);
+      Collection.discover(animal.id);
+    }, 600);
   }
 
   return {

@@ -2686,5 +2686,47 @@
       "Has a forked tongue like a snake that it flicks in and out to smell prey from kilometres away",
       "Some species are so intelligent they can count — in zoo experiments, monitors could tell the difference between groups of 3 and 4 snails!"
     ]
+  },
+  {
+    "id": "desert-horned-lizard",
+    "name": "Desert Horned Lizard",
+    "epithet": "The Blood Squirter",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "desert",
+    "region": "North America",
+    "rarity": "uncommon",
+    "image": "images/animals/desert-horned-lizard.jpg",
+    "stats": {
+      "dangerLevel": 3,
+      "speed": 4,
+      "size": 2
+    },
+    "facts": [
+      "Can shoot blood from its eyes up to 1.5 metres to scare off predators — the blood tastes disgusting to coyotes and dogs!",
+      "Covered in spiky horns and scales that make it look like a tiny dinosaur from the Cretaceous period",
+      "Can change colour to blend perfectly into desert sand and rocks — nearly invisible when it stays still"
+    ]
+  },
+  {
+    "id": "saltwater-crocodile",
+    "name": "Saltwater Crocodile",
+    "epithet": "The Ultimate Apex",
+    "type": "reptile",
+    "category": "predator",
+    "habitat": "coastal",
+    "region": "Southeast Asia & Australia",
+    "rarity": "legendary",
+    "image": "images/animals/saltwater-crocodile.jpg",
+    "stats": {
+      "dangerLevel": 10,
+      "speed": 7,
+      "size": 10
+    },
+    "facts": [
+      "The largest living reptile on Earth — can grow over 6 metres long and weigh more than 1,000 kg!",
+      "Has the most powerful bite ever measured in any living animal at over 16,000 newtons — strong enough to crush a car!",
+      "Can swim across open ocean for hundreds of kilometres and has been found 1,000 km from the nearest coast"
+    ]
   }
 ]
