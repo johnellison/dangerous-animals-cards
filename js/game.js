@@ -27,6 +27,8 @@ const Game = (function() {
    */
   function init(animalData) {
     animals = AnimalData.shuffle([...animalData]);
+    // Start at a random position so it's different each visit
+    currentAnimalIndex = Math.floor(Math.random() * animals.length);
     Collection.load();
     setupEventListeners();
     updateCardCounter();
