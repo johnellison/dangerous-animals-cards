@@ -2665,5 +2665,26 @@
       "Can lift fish weighing up to 1.8 kg out of the water with its powerful talons while flying at full speed",
       "Nearly went extinct in the 1960s with only 417 pairs left, but conservation brought them back to over 300,000 — one of nature's greatest comeback stories!"
     ]
+  },
+  {
+    "id": "monitor-lizard",
+    "name": "Monitor Lizard",
+    "epithet": "The Ancient Predator",
+    "type": "reptile",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "Africa, Asia & Australia",
+    "rarity": "uncommon",
+    "image": "images/animals/monitor-lizard.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 7,
+      "size": 8
+    },
+    "facts": [
+      "The monitor lizard family includes the Komodo dragon — the largest lizard on Earth at over 3 metres long!",
+      "Has a forked tongue like a snake that it flicks in and out to smell prey from kilometres away",
+      "Some species are so intelligent they can count — in zoo experiments, monitors could tell the difference between groups of 3 and 4 snails!"
+    ]
   }
 ]
