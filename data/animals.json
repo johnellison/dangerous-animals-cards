@@ -2728,5 +2728,68 @@
       "Has the most powerful bite ever measured in any living animal at over 16,000 newtons — strong enough to crush a car!",
       "Can swim across open ocean for hundreds of kilometres and has been found 1,000 km from the nearest coast"
     ]
+  },
+  {
+    "id": "cat-snake",
+    "name": "Cat Snake",
+    "epithet": "The Slit-Eyed Strangler",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "South Asia",
+    "rarity": "uncommon",
+    "image": "images/animals/cat-snake.jpg",
+    "stats": {
+      "dangerLevel": 4,
+      "speed": 5,
+      "size": 3
+    },
+    "facts": [
+      "Named for its vertical slit pupils just like a cat — it hunts at night using these special eyes to spot lizards and geckos in the dark!",
+      "Mildly venomous with rear fangs, but not dangerous to humans — it flattens its head into a triangle shape to look like a viper and scare off predators!",
+      "When threatened, it coils into an S-shape and strikes repeatedly — but it's mostly bluffing because its venom is too weak to hurt people"
+    ]
+  },
+  {
+    "id": "russells-viper",
+    "name": "Russell's Viper",
+    "epithet": "The Chain-Scaled Killer",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "South Asia",
+    "rarity": "rare",
+    "image": "images/animals/russells-viper.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 6,
+      "size": 5
+    },
+    "facts": [
+      "One of the Big Four — the four snake species responsible for the most snakebite deaths in India, causing thousands of deaths every year!",
+      "Makes a loud hissing sound that can be heard from far away as a warning — it's one of the loudest hisses of any snake in the world!",
+      "Its venom attacks your blood and stops it from clotting — scientists actually use Russell's Viper venom in hospitals to test how well human blood clots"
+    ]
+  },
+  {
+    "id": "horned-viper",
+    "name": "Horned Viper",
+    "epithet": "The Desert Devil",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "desert",
+    "region": "North Africa",
+    "rarity": "uncommon",
+    "image": "images/animals/horned-viper.jpg",
+    "stats": {
+      "dangerLevel": 7,
+      "speed": 6,
+      "size": 3
+    },
+    "facts": [
+      "Has two devil-like horns above its eyes made of single pointed scales — scientists think they help keep sand out of its eyes while it's buried!",
+      "Buries its entire body in desert sand with only its eyes poking out, then ambushes prey that walks past — the ultimate sand trap!",
+      "Moves using a special sidewinding motion across hot sand, leaving J-shaped tracks — this lets it travel across burning dunes without overheating"
+    ]
   }
 ]
