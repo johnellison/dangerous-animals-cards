@@ -2791,5 +2791,26 @@
       "Buries its entire body in desert sand with only its eyes poking out, then ambushes prey that walks past — the ultimate sand trap!",
       "Moves using a special sidewinding motion across hot sand, leaving J-shaped tracks — this lets it travel across burning dunes without overheating"
     ]
+  },
+  {
+    "id": "indian-rock-python",
+    "name": "Indian Rock Python",
+    "epithet": "The Silent Stalker",
+    "type": "reptile",
+    "category": "predator",
+    "habitat": "forest",
+    "region": "South Asia",
+    "rarity": "uncommon",
+    "image": "images/animals/indian-rock-python.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 5,
+      "size": 7
+    },
+    "facts": [
+      "The longest scientifically recorded specimen, collected in Pakistan, was 4.6 m (15 ft 1 in) long and weighed 52 kg (114 lb 10 oz)",
+      "In Pakistan, Indian pythons commonly reach a length of 2.4–3.0 m (7 ft 10 in – 9 ft 10 in)",
+      "After a heavy meal, an individual may fast for weeks, the longest recorded duration being 2 years"
+    ]
   }
 ]
