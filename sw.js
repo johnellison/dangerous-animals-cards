@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wild-animal-cards-v8';
+const CACHE_NAME = 'wild-animal-cards-v10';
 
 const CORE_ASSETS = [
   'landing.html',

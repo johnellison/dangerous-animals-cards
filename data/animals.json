@@ -2812,5 +2812,68 @@
       "In Pakistan, Indian pythons commonly reach a length of 2.4–3.0 m (7 ft 10 in – 9 ft 10 in)",
       "After a heavy meal, an individual may fast for weeks, the longest recorded duration being 2 years"
     ]
+  },
+  {
+    "id": "newcastle-big-boy",
+    "name": "Newcastle Big Boy",
+    "epithet": "The Giant Funnel-Web",
+    "type": "arachnid",
+    "category": "venomous",
+    "habitat": "land",
+    "region": "Newcastle, Australia",
+    "rarity": "legendary",
+    "image": "images/animals/newcastle-big-boy.jpg",
+    "stats": {
+      "dangerLevel": 9,
+      "speed": 5,
+      "size": 7
+    },
+    "facts": [
+      "Scientists named it after Kane Christensen, who helped prove this monster is a brand-new species — not just a big Sydney funnel-web!",
+      "The biggest male ever measured had a leg span of 9.2 cm — one of the largest funnel-web spiders in the world!",
+      "Uses the same life-saving antivenom as the Sydney funnel-web — and luckily no one has ever died from its bite"
+    ]
+  },
+  {
+    "id": "smooth-snake",
+    "name": "Smooth Snake",
+    "epithet": "The UK's Secret Serpent",
+    "type": "reptile",
+    "category": "defensive",
+    "habitat": "land",
+    "region": "United Kingdom",
+    "rarity": "legendary",
+    "image": "images/animals/smooth-snake.webp",
+    "stats": {
+      "dangerLevel": 1,
+      "speed": 4,
+      "size": 4
+    },
+    "facts": [
+      "Not dangerous to humans — so shy and secretive that you're very lucky if you ever spot one!",
+      "The UK's rarest reptile, hiding on sandy heathlands in Dorset, Hampshire and Surrey",
+      "Named 'smooth' because its scales are flat with no ridge down the middle — unlike grass snakes and adders"
+    ]
+  },
+  {
+    "id": "sidewinder",
+    "name": "Sidewinder",
+    "epithet": "The Desert Slider",
+    "type": "reptile",
+    "category": "venomous",
+    "habitat": "desert",
+    "region": "Southwestern United States",
+    "rarity": "uncommon",
+    "image": "images/animals/sidewinder.jpg",
+    "stats": {
+      "dangerLevel": 6,
+      "speed": 7,
+      "size": 4
+    },
+    "facts": [
+      "Slides sideways across burning desert sand, leaving J-shaped tracks — the sideways motion stops its belly from overheating!",
+      "Has little horns above its eyes to shade them from the sun and keep sand from drifting over them",
+      "Baby sidewinders wiggle their tails to lure lizards, pretending to be a caterpillar or moth!"
+    ]
   }
 ]
